@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/*  GLOBAL STYLE  */
+
+:root {
+	--font-family: "Gilroy", sans-serif;
+	--second-family: "Lack", sans-serif;
+	--third-family: "Inter", sans-serif;
+
+	--fon: #f8fafc;
+	--0f172a: #0f172a;
+	--ffffff: #fff;
+	--2563eb-osn: #2563eb;
+	--e5e7eb: #e5e7eb;
+	--e2e8f0: #e2e8f0;
+	--f1f5f9: #f1f5f9;
+	--cbd5e1: #cbd5e1;
+	--c9daff: #c9daff;
+	--bfdbfe: #bfdbfe;
+	--94a3b8: #94a3b8;
+	--64748b: #64748b;
+	--475569: #475569;
+	--9ca3af: #9ca3af;
+	--3076ff: #3076ff;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background: var(--fon);
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--64748b);
+	overflow: hidden;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	display: block;
+}
+
+.grid_container {
+	max-width: 1600px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--second-family);
+	font-weight: 400;
+	color: var(--0f172a);
+}
+
+//делает поле ввода белым
+//делает поле ввода белым
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+	box-shadow: 0 0 0px 1000px white inset !important;
+	-webkit-text-fill-color: #000 !important;
+}
+
+input:-webkit-autofill {
+	animation-name: autofillWhite;
+	animation-fill-mode: both;
+	animation-duration: 500ms;
+}
+
+@keyframes autofillWhite {
+	0% {
+		box-shadow: 0 0 0px 1000px #f0f0f0 inset;
+		-webkit-text-fill-color: #666;
+	}
+
+	100% {
+		box-shadow: 0 0 0px 1000px white inset;
+		-webkit-text-fill-color: #000;
+	}
+}
+
+input {
+	background-color: white;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.compensate-for-scrollbar {
+	margin-right: 0 !important;
+}
+
+
+/*-------wp---------*/
+.aligncenter,
+.alignleft,
+.alignright {
+	display: block;
+	padding: 0;
+}
+
+.aligncenter {
+	float: none;
+	margin: .5em auto 1em;
+}
+
+.alignright {
+	float: right;
+	margin: .5em 4em 2em 0;
+}
+
+.alignleft {
+	float: left;
+	margin: .5em 4em 2em 0;
+}
+
+.wp-caption {
+	padding: 5px 0;
+	border: 1px solid #555;
+	background: #444;
+	text-align: center;
+}
+
+.wp-caption img {
+	display: inline;
+}
+
+.wp-caption p.wp-caption-text {
+	margin: 5px 0 0;
+	padding: 0;
+	text-align: center;
+	font-size: 75%;
+	font-weight: 100;
+	font-style: italic;
+	color: #ddd;
+}

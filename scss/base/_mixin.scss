@@ -1,0 +1,188 @@
+@function breakpoint($key) {
+	@return map-get((xs: 480px,
+			sm: 768px,
+			md: 1024px,
+			lg: 1280px), $key);
+}
+
+
+
+@mixin flex {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+@mixin flex-start {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-flow: column;
+}
+
+@mixin img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+}
+
+@mixin img-contain {
+	object-fit: scale-down;
+	object-position: center;
+	height: 100%;
+}
+
+@mixin btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+//Сетка карточек
+
+@mixin flex-grid($items-per-row) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 140px 20px; // отступ в макете между карточек
+
+	> * {
+		width: calc((100% - (#{$items-per-row} - 1) * 20px) / #{$items-per-row});
+	}
+}
+
+//ПРИМЕР
+//============== 
+//.grid-3 {
+//	@include flex-grid(3);
+//}
+//
+//.grid-4 {
+//	@include flex-grid(4);
+//}
+
+
+
+// Сетка grid 
+
+@mixin card-grid($columns: 4, $gap: 20px) {
+	display: grid;
+	grid-template-columns: repeat($columns, minmax(0, 1fr));
+	gap: $gap;
+}
+
+// Пример
+//.card-grid {
+//  @include card-grid(4, 20px);
+//}
+
+//Адаптивный миксин
+@mixin responsive-card-grid($cols-map: (default: 4, md: 3, sm: 2, xs: 1), $gap: 20px) {
+	display: grid;
+	gap: $gap;
+
+	// Значение по умолчанию
+	@if map-has-key($cols-map, default) {
+		grid-template-columns: repeat(map-get($cols-map, default), minmax(0, 1fr));
+	}
+
+	// Брейкпоинты
+	@each $breakpoint,
+	$cols in $cols-map {
+		@if $breakpoint !=default {
+			@media (max-width: breakpoint($breakpoint)) {
+				grid-template-columns: repeat($cols, minmax(0, 1fr));
+			}
+		}
+	}
+}
+
+//Пример
+//.card-grid-responsive {
+//	@include responsive-card-grid((default: 4,
+//			md: 3,
+//			sm: 2,
+//			xs: 1), 20px);
+//}
+
+
+
+/// Адаптивный миксин для сетки карточек
+/// @param $cols-map - map с брейкпоинтами и количеством колонок
+/// @param $gap - расстояние между карточками
+@mixin responsive-card-grid($cols-map: (default: 4, md: 3, sm: 2, xs: 1), $gap: 20px) {
+	display: grid;
+	gap: $gap;
+
+	// Значение по умолчанию (desktop)
+	@if map-has-key($cols-map, default) {
+		grid-template-columns: repeat(map-get($cols-map, default), 1fr);
+	}
+
+	// Брейкпоинты
+	@each $breakpoint,
+	$cols in $cols-map {
+		@if $breakpoint !=default {
+			@media (max-width: breakpoint($breakpoint)) {
+				grid-template-columns: repeat($cols, 1fr);
+			}
+		}
+	}
+}
+
+// пример
+//.card-grid {
+//  @include card-grid(4, 20px); // просто сетка 4 в ряд
+//}
+//
+//.card-grid-responsive {
+//  @include responsive-card-grid((
+//    default: 4,
+//    md: 3,
+//    sm: 2,
+//    xs: 1
+//  ), 20px);
+//}
+
+@mixin clamp($row) {
+	display: -webkit-box;
+	-webkit-line-clamp: $row;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+// пример
+
+//@include clamp(2);
+
+
+//скрол в мобилке
+
+@mixin box-scroll {
+	display: flex;
+	flex-flow: row;
+	gap: 10px;
+	overflow-x: auto;
+	-ms-scroll-snap-type: x mandatory;
+	scroll-snap-type: x mandatory;
+	scroll-padding-right: 15px;
+	-webkit-overflow-scrolling: touch;
+}
+
+@mixin item-scroll($maxwidth) {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	scroll-snap-align: start;
+	max-width: $maxwidth;
+}
+
+
+@mixin psevdo {
+	position: absolute;
+	content: '';
+}
+
+

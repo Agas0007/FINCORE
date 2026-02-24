@@ -1,0 +1,21 @@
+#header {
+	display: flex;
+	position: fixed;
+	top: 30px;
+	left: 0;
+	right: 0;
+	--tw-text-opacity: 1;
+	margin: 0 auto;
+	transform: translateY(0px);
+	z-index: 30;
+	will-change: transform;
+	transition: transform 0.2s linear;
+}
+
+#header.scrolled {
+	transform: translateY(calc(-100% - 40px));
+}
+
+#header.scrolling-up {
+	transform: translateY(0);
+}

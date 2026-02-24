@@ -1,0 +1,16 @@
+{
+  "name": "my_site",
+  "lang": "ru",
+  "start_url": "https://yoursite.ru/turboapp/index.html",
+  "scope": "https://yoursite.ru/",
+  "yandex": {
+    "manifest_version": 1,
+    "app_version": "1.0.0",
+    "cache": {
+      "resources": [
+        "/public/css/main.css",
+        "/public/js/user.js",
+      ]
+    }
+  }
+}

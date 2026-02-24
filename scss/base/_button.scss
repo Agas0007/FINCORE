@@ -1,0 +1,31 @@
+@use 'mixin'as *;
+
+.site_btn {
+	@include btn;
+	width: max-content;
+	background: var(--2563eb-osn);
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 18px;
+	color: var(--ffffff);
+	border-radius: 10px;
+	padding: 0 40px;
+	height: 52px;
+	transition: all 0.4s ease;
+}
+
+.site_btn_blue {
+	box-shadow: 0 8px 10px -6px rgba(37, 99, 235, 0.2), 0 20px 25px -5px rgba(37, 99, 235, 0.2);
+}
+
+.site_btn_white {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	background: var(--ffffff);
+	border: 1px solid var(--e2e8f0);
+	border-radius: 12px;
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+	color: var(--475569);
+}

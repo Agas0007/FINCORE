@@ -1,0 +1,16 @@
+.background {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 94px;
+	width: 100vw;
+	min-height: 990px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.cell {
+	height: 100%;
+	transition: background 0.35s ease;
+}
