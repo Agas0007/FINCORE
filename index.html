@@ -54,7 +54,8 @@
 	</header>
 	<main>
 		<section class="banner">
-			<div class="background"></div>
+			<div class="background" data-cell-width="94" data-angle="140" data-color1="#2563EB" data-color2="rgba(255,255,255,0.95)" data-color3="#813CE7" data-color3-stop="135%" data-pmin="55" data-pmax="98" data-alpha="0.08" data-blend-width="0.5" data-spread="0.8">
+			</div>
 			<div class="grid_container banner_wrapper">
 				<div class="banner_left">
 					<h1 class="banner_title">
@@ -145,10 +146,10 @@
 					Продукты
 				</h2>
 				<div class="products_tab_nav tabs_catalog">
-					<a href="#!" data-tab="tab_1" class="products_nav_tab active">Финансовый шлюз</a>
-					<a href="#!" data-tab="tab_2" class="products_nav_tab">Кэшбэк</a>
-					<a href="#!" data-tab="tab_3" class="products_nav_tab">Оптимизация затрат</a>
-					<a href="#!" data-tab="tab_4" class="products_nav_tab">Разные формы легальных выплат</a>
+					<a data-tab="tab_1" class="products_nav_tab active">Финансовый шлюз</a>
+					<a data-tab="tab_2" class="products_nav_tab">Кэшбэк</a>
+					<a data-tab="tab_3" class="products_nav_tab">Оптимизация затрат</a>
+					<a data-tab="tab_4" class="products_nav_tab">Разные формы легальных выплат</a>
 				</div>
 				<div class="products_tabs tabs_content">
 					<div id="tab_1" class="products_tab box_tab active">
@@ -665,13 +666,16 @@
 		</section>
 
 		<section class="why_us">
+			<div class="background" data-cell-width="94" data-angle="140" data-color1="#9541E6" data-color2="rgba(97, 82, 209, 0.77)" data-color3="#2259D6" data-color3-stop="135%" data-pmin="25" data-pmax="75" data-alpha="0.08" data-blend-width="0.25" data-spread="1.2">
+			</div>
+
 			<div class="grid_container">
 				<h2 class="why_us_title">
 					Почему FINCORE выгоднее
 				</h2>
 				<div class="why_us_tab_nav tabs_catalog products_tab_nav">
-					<a href="#!" data-tab_why_us="why_us_tab_1" class="products_nav_tab active">Выгода</a>
-					<a href="#!" data-tab_why_us="why_us_tab_2" class="products_nav_tab">Зарабатывать больше</a>
+					<a data-tab_why_us="why_us_tab_1" data-title="Почему FINCORE выгоднее" class="why_us_tab_link products_nav_tab active">Выгода</a>
+					<a data-tab_why_us="why_us_tab_2" data-title="Зарабатывайте больше с нашими ребейтами" class="why_us_tab_link products_nav_tab">Зарабатывать больше</a>
 					<span class="tab_indicator"></span>
 				</div>
 				<div class="products_tabs tabs_content">
@@ -716,9 +720,11 @@
 										Кешбэк сервиса
 									</span>
 									<span class="why_us_center">
-										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M18.75 9.75C18.75 4.78125 14.7188 0.75 9.75 0.75C4.78125 0.75 0.75 4.77944 0.75 9.75C0.75 14.7206 4.77944 18.75 9.75 18.75C14.7206 18.75 18.75 14.7188 18.75 9.75Z" stroke="#F87171" stroke-width="1.5" />
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M21 12C21 7.03125 16.9688 3 12 3C7.03125 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9688 21 12Z" stroke="#F87171" stroke-width="1.5" />
+											<path d="M15 15L9 9M9 15L15 9" stroke="#F87171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 										</svg>
+
 									</span>
 									<span class="why_us_right">
 										до 3-5% от оборота
@@ -804,27 +810,453 @@
 											Пополняйте рекламные сети и оплачивайте сервисы с единого счета без лишних конвертаций и потерь.
 										</p>
 									</div>
-									<span class="oborot_info_more">
+									<a href="" class="oborot_info_more">
 										Узнать условия
 										<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M4.46484 0.685547L4.98516 0.165234C5.20547 -0.0550781 5.56172 -0.0550781 5.77969 0.165234L10.3359 4.71914C10.5562 4.93945 10.5562 5.2957 10.3359 5.51367L5.77969 10.0699C5.55937 10.2902 5.20312 10.2902 4.98516 10.0699L4.46484 9.54961C4.24219 9.32695 4.24688 8.96367 4.47422 8.7457L7.29844 6.05508H0.5625C0.250781 6.05508 0 5.8043 0 5.49258V4.74258C0 4.43086 0.250781 4.18008 0.5625 4.18008H7.29844L4.47422 1.48945C4.24453 1.27148 4.23984 0.908203 4.46484 0.685547Z" fill="white" />
 										</svg>
-									</span>
+									</a>
 									<div class="pseudo_element">
-										<img src="/public/images/oborot_img.jpg" alt="">
+										<img src="/public/images/oborot_img.png" alt="">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<div class="benefit_box">
+			<div class="grid_container">
+				<ul class="benefit_box_list">
+					<li>
+						<svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.75 5.3125V0H0.9375C0.417969 0 0 0.417969 0 0.9375V19.0625C0 19.582 0.417969 20 0.9375 20H14.0625C14.582 20 15 19.582 15 19.0625V6.25H9.6875C9.17188 6.25 8.75 5.82812 8.75 5.3125ZM2.5 2.8125C2.5 2.63984 2.63984 2.5 2.8125 2.5H5.9375C6.11016 2.5 6.25 2.63984 6.25 2.8125V3.4375C6.25 3.61016 6.11016 3.75 5.9375 3.75H2.8125C2.63984 3.75 2.5 3.61016 2.5 3.4375V2.8125ZM2.5 5.3125C2.5 5.13984 2.63984 5 2.8125 5H5.9375C6.11016 5 6.25 5.13984 6.25 5.3125V5.9375C6.25 6.11016 6.11016 6.25 5.9375 6.25H2.8125C2.63984 6.25 2.5 6.11016 2.5 5.9375V5.3125ZM10.0316 15H11.875C12.2203 15 12.5 15.2797 12.5 15.625Cnan nan 12.2203 16.25 11.875 16.25H10.0316C9.38906 16.25 8.81016 15.893 8.52227 15.318C8.40703 15.0867 8.20625 15.0633 8.125 15.0633Cnan nan 7.84297 15.0863 7.73359 15.3051L7.43398 15.9043C7.32817 16.116 7.11172 16.2498 6.875 16.2496C6.86016 16.2496 6.8457 16.2488 6.83047 16.2477C6.57852 16.2301 6.36172 16.0621 6.28242 15.8223L5.625 13.8512L5.21055 15.0965C4.98047 15.7863 4.33633 16.25 3.60898 16.25H3.125C2.77969 16.25 2.5 15.9703 2.5 15.625Cnan nan 2.77969 15 3.125 15H3.60898C3.79766 15 3.96484 14.8797 4.02461 14.7008L4.73516 12.5664C4.86406 12.1832 5.22109 11.9254 5.625 11.9254Cnan nan 6.38594 12.1828 6.51445 12.5664L7.05664 14.193C7.82891 13.5605 9.16797 13.8141 9.63477 14.7461C9.71367 14.9047 9.86758 15 10.0316 15ZM14.7266 4.10156L10.9023 0.273438C10.7266 0.0976562 10.4883 0 10.2383 0H10V5H15V4.76172C15 4.51562 14.9023 4.27734 14.7266 4.10156Z" fill="#BFDBFE" />
+						</svg>
+						Официальный договор
+					</li>
+					<li>
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.8398 3.13945C13.3468 2.51289 11.9027 2.04883 8.74997 0.625C5.59723 2.04883 4.15309 2.51289 0.660122 3.13945C0.0273098 13.1691 8.14762 16.6324 8.74997 16.875C9.35231 16.6324 17.4726 13.1691 16.8398 3.13945V3.13945" stroke="#BFDBFE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						Прозрачный курс
+					</li>
+					<li>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M19.6875 10C19.6875 15.3503 15.3503 19.6875 10 19.6875C4.64973 19.6875 0.3125 15.3503 0.3125 10C0.3125 4.64973 4.64974 0.3125 10 0.3125C15.3503 0.3125 19.6875 4.64973 19.6875 10ZM8.87945 15.1295L16.067 7.94195C16.311 7.69789 16.311 7.30215 16.067 7.05809L15.1831 6.17422C14.939 5.93012 14.5433 5.93012 14.2992 6.17422L8.4375 12.0359L5.70082 9.29918C5.45676 9.05512 5.06102 9.05512 4.81691 9.29918L3.93305 10.183C3.68898 10.4271 3.68898 10.8229 3.93305 11.0669L7.99555 15.1294C8.23965 15.3735 8.63535 15.3735 8.87945 15.1295Z" fill="#BFDBFE" />
+						</svg>
+						Без скрытых комиссий
+					</li>
+					<li>
+						<svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.19023 0.664063L0.625 11.25H5.625L4.39414 18.0168C4.3894 18.0437 4.39681 18.0713 4.41438 18.0922C4.43195 18.113 4.45786 18.1251 4.48516 18.125V18.125C4.51424 18.125 4.54161 18.1112 4.55898 18.0879L13.125 7.5H8.125L9.36172 0.732422C9.36508 0.705148 9.35656 0.677743 9.33832 0.657186C9.32008 0.63663 9.29389 0.624906 9.26641 0.625001V0.625001C9.23624 0.62512 9.20794 0.639633 9.19023 0.664063V0.664063" stroke="#BFDBFE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						Ежедневные выплаты
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<section class="solutions_box">
+			<div class="grid_container">
+				<h2 class="solutions_title">
+					Решения для профессионалов рынка
+				</h2>
+				<div class="solutions_tab_nav products_tab_nav tabs_catalog">
+					<a data-tab_solutions="tab_solutions_1" class="products_nav_tab active">Простой</a>
+					<a data-tab_solutions="tab_solutions_2" class="products_nav_tab">Премиум условия</a>
+				</div>
+
+				<div class="solutions_tabs products_tabs tabs_content">
+					<div id="tab_solutions_1" class="solutions_tab box_tab active">
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Разработчики игр
+							</span>
+							<p class="solutions_item_text">
+								Мобильные и PC игры. Вывод доходов со сторов без головной боли.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item2.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Веб-мастера
+							</span>
+							<p class="solutions_item_text">
+								Арбитраж трафика. Оплата рекламы и получение партнерских выплат.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item3.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Инфлюенсеры
+							</span>
+							<p class="solutions_item_text">
+								Блогеры YouTube. Легальный вывод монетизации на карты или ИП.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item4.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								IT-компании
+							</span>
+							<p class="solutions_item_text">
+								Аутсорсинг и продукты. Оптимизация ФОТ и международных контрактов.
+							</p>
+						</div>
+					</div>
+					<div id="tab_solutions_2" class="solutions_tab box_tab ">
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Разработчики игр
+							</span>
+							<p class="solutions_item_text">
+								Мобильные и PC игры. Вывод доходов со сторов без головной боли.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item2.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Веб-мастера
+							</span>
+							<p class="solutions_item_text">
+								Арбитраж трафика. Оплата рекламы и получение партнерских выплат.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item3.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								Инфлюенсеры
+							</span>
+							<p class="solutions_item_text">
+								Блогеры YouTube. Легальный вывод монетизации на карты или ИП.
+							</p>
+						</div>
+						<div class="solutions_item">
+							<div class="solutions_item_icon">
+								<img src="/public/images/solutions_item4.svg" alt="">
+							</div>
+							<span class="solutions_item_title">
+								IT-компании
+							</span>
+							<p class="solutions_item_text">
+								Аутсорсинг и продукты. Оптимизация ФОТ и международных контрактов.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="dohod_box">
+			<div class="background" data-cell-width="94" data-angle="140" data-color1="#9541E6" data-color2="rgba(97, 82, 209, 0.77)" data-color3="#2259D6" data-color3-stop="135%" data-pmin="25" data-pmax="75" data-alpha="0.08" data-blend-width="0.25" data-spread="1.2">
+			</div>
+			<div class="grid_container dohod_wrap">
+				<div class="dohod_calc">
+					<span class="dohod_calc_title">
+						Калькулятор выплат
+					</span>
+					<div class="dohod_calc_item">
+						<span class="calc_item_title">
+							Источник средств
+						</span>
+						<div class="calc_item_box select">
+							App Store Connect
+						</div>
+					</div>
+					<div class="dohod_calc_items">
+						<div class="dohod_calc_item">
+							<span class="calc_item_title">
+								Сумма ($)
+							</span>
+							<div class="calc_item_box">
+								10000
+							</div>
+						</div>
+						<div class="dohod_calc_item">
+							<span class="calc_item_title">
+								Метод вывода
+							</span>
+							<div class="calc_item_box select">
+								USDT (TRC20)
+							</div>
+						</div>
+					</div>
+					<div class="dohod_calc_value first_child">
+						<span class="dohod_calc_name">
+							Вы получите:
+						</span>
+						<span class="dohod_calc_num num_bold">
+							$9,850
+						</span>
+					</div>
+					<div class="dohod_calc_value">
+						<span class="dohod_calc_name">
+							Комиссия сервиса
+						</span>
+						<span class="dohod_calc_num">
+							1.5%
+						</span>
+					</div>
+					<a href="" class="site_btn">
+						Начать вывод
+					</a>
+				</div>
+				<div class="dohod_right">
+					<h2 class="dohod_title">
+						Мгновенный доступ к вашим заработкам
+					</h2>
+					<span class="dohod_subtitle">
+						Забудьте о долгих ожиданиях и сложных проверках. Мы упростили процесс получения выплат до 4 простых шагов.
+					</span>
+
+					<div class="dohod_list">
+						<div class="dohod_list_item">
+							<div class="dohod_list_icon">
+								<img src="/public/images/dohod_list.svg" alt="">
+							</div>
+							<div class="dohod_list_info">
+								<span class="dohod_list_title">
+									Регистрация
+								</span>
+								<p class="dohod_list_text">
+									Создайте аккаунт и пройдите простую верификацию за 5 минут
+								</p>
+							</div>
+						</div>
+						<div class="dohod_list_item">
+							<div class="dohod_list_icon">
+								<img src="/public/images/dohod_list2.svg" alt="">
+							</div>
+							<div class="dohod_list_info">
+								<span class="dohod_list_title">
+									Подключение источника
+								</span>
+								<p class="dohod_list_text">
+									Добавьте реквизиты в рекламную сеть или стор
+								</p>
+							</div>
+						</div>
+						<div class="dohod_list_item">
+							<div class="dohod_list_icon">
+								<img src="/public/images/dohod_list3.svg" alt="">
+							</div>
+							<div class="dohod_list_info">
+								<span class="dohod_list_title">
+									Получение средств
+								</span>
+								<p class="dohod_list_text">
+									Деньги поступают на ваш единый баланс
+								</p>
+							</div>
+						</div>
+						<div class="dohod_list_item">
+							<div class="dohod_list_icon">
+								<img src="/public/images/dohod_list4.svg" alt="">
+							</div>
+							<div class="dohod_list_info">
+								<span class="dohod_list_title">
+									Мгновенный вывод
+								</span>
+								<p class="dohod_list_text">
+									Выводите на карту, счет или криптокошелек 24/7
+								</p>
+							</div>
+						</div>
 
 
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section class="logistika_box">
+			<div class="grid_container">
+				<h2 class="logistika_title">
+					In-app доход: сложная логистика стала простой
+				</h2>
+				<span class="logistika_subtitle">
+					Мы решили главную проблему мобильных разработчиков из РФ — получение валютной выручки от сторов в условиях санкций.
+				</span>
+				<div class="logistika_wrapper">
+					<div class="gradient-stripe"></div>
+
+					<div class="logistika_left">
+						<span class="logistika_info_title">
+							Получаем от
+						</span>
+						<div class="logistika_item">
+							<div class="logistika_item_icon">
+								<img src="/public/images/logistika_item.svg" alt="">
+							</div>
+							<div class="logistika_item_info">
+								<span class="logistika_item_name">
+									Google Play
+								</span>
+								<div class="logistika_item_subtitle">
+									USD / EUR
+								</div>
+							</div>
+						</div>
+						<div class="logistika_item">
+							<div class="logistika_item_icon">
+								<img src="/public/images/logistika_item2.svg" alt="">
+							</div>
+							<div class="logistika_item_info">
+								<span class="logistika_item_name">
+									App Store
+								</span>
+								<div class="logistika_item_subtitle">
+									USD / EUR
+								</div>
+							</div>
+						</div>
+						<div class="logistika_item">
+							<div class="logistika_item_icon">
+								<img src="/public/images/logistika_item3.svg" alt="">
+							</div>
+							<div class="logistika_item_info">
+								<span class="logistika_item_name">
+									Steam
+								</span>
+								<div class="logistika_item_subtitle">
+									Global Sales
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="logistika_center">
+						<div class="logistika_center_logo">
+							<img src="/public/images/logistika_center_logo.svg" alt="">
+						</div>
+						<div class="logistika_center_item">
+							<div class="logistika_center_icon">
+								<img src="/public/images/center_icon.svg" alt="">
+							</div>
+							<span class="logistika_center_name">
+								Foreign Accounts (EU/US)
+							</span>
+						</div>
+						<div class="logistika_center_item">
+							<div class="logistika_center_icon">
+								<img src="/public/images/center_icon2.svg" alt="">
+							</div>
+							<span class="logistika_center_name">
+								Compliance Check
+							</span>
+						</div>
+						<div class="logistika_center_item">
+							<div class="logistika_center_icon">
+								<img src="/public/images/center_icon3.png" alt="">
+							</div>
+							<span class="logistika_center_name">
+								Currency Conversion
+							</span>
+						</div>
+						<span class="center_secure">
+							SECURE
+						</span>
+					</div>
+					<div class="logistika_right">
+						<span class="logistika_info_title">
+							Выплачиваем в РФ
+						</span>
+						<div class="vuplata_item">
+							<div class="vuplata_item_top">
+								<span class="vuplata_item_name">
+									USDT (TRC20)
+								</span>
+								<div class="vuplata_item_logo">
+									<img src="/public/images/vuplata_logo.svg" alt="">
+								</div>
+							</div>
+							<span class="vuplata_item_text">
+								Мгновенный перевод по курсу биржи
+							</span>
+							<span class="vuplata_item_procent">
+								0% Commission option
+							</span>
+						</div>
+						<div class="vuplata_item">
+							<div class="vuplata_item_top">
+								<span class="vuplata_item_name">
+									Friendly Banks
+								</span>
+								<div class="vuplata_item_logo">
+									<img src="/public/images/vuplata_logo2.svg" alt="">
+								</div>
+							</div>
+							<span class="vuplata_item_text">
+								Swift / Sepa переводы в банки-партнеры
+							</span>
+							<div class="vuplata_item_img">
+								<img src="/public/images/svetofor.svg" alt="">
+							</div>
+						</div>
+
+
+					</div>
+				</div>
 
 			</div>
 		</section>
 
 
+		<section class="leave_request">
+			<div class="grid_container leave_request_wrapper">
+				<div class="leave_request_left">
+					<h2 class="leave_request_title">
+						Готовы начать? <br> Оставьте заявку
+					</h2>
+
+					<ul class="leave_request_list">
+						<li>Быстрый онбординг за 24 часа</li>
+						<li>Персональный менеджер поддержки</li>
+					</ul>
+
+					<a href="mailto:support@fincore.com" class="leave_request_mail">
+						support@fincore.com
+					</a>
+					<a href="tel:@fincore_support" class="leave_request_telegram">
+						@fincore_support
+					</a>
+				</div>
+				<form action="" class="leave_request_form">
+					<input type="text" name="name" placeholder="Ваше имя">
+					<input type="email" name="name" placeholder="Email">
+					<input type="text" name="name" placeholder="Telegram">
+					<select name="" id="">
+						<option value="">Выберите вашу роль</option>
+						<option value="">Веб-мастер</option>
+						<option value="">Инфлюенсер</option>
+						<option value="">IT-компания</option>
+					</select>
+
+					<p class="private_policy">
+						Нажимая кнопку, вы соглашаетесь с <a href="">политикой конфиденциальности</a>
+					</p>
+				</form>
+			</div>
+		</section>
 
 
 
@@ -839,11 +1271,38 @@
 	<script src="public/js/jquery.inputmask.bundle.min.js"></script>
 	<script src="public/js/swiper-bundle.min.js"></script>
 	<script src="public/js/user.js"></script>
+	<script src="public/js/animation_new.js"></script>
 	<script src="public/js/header.js"></script>
 	<script src="public/js/tabs.js"></script>
 
+	<script>
+		// подмена заголовка в табах
+
+		// Получаем все элементы с классом 'why_us_tab_link'
+		const tabLinks = document.querySelectorAll('.why_us_tab_link');
+
+		// Получаем элемент, куда будем вставлять текст
+		const titleElement = document.querySelector('.why_us_title');
+
+		// Проверяем, что элементы найдены
+		if (tabLinks.length > 0 && titleElement) {
+			// Проходим по всем ссылкам и добавляем обработчик клика
+			tabLinks.forEach(link => {
+				link.addEventListener('click', function() {
+					// Получаем значение атрибута data-title у текущего элемента
+					const titleText = this.getAttribute('data-title');
+
+					// Вставляем текст в целевой элемент
+					titleElement.textContent = titleText;
+				});
+			});
+		} else {
+			console.warn('Один или несколько элементов не найдены на странице.');
+		}
+	</script>
 
 	<script>
+		//бегущая строка
 		document.querySelectorAll('.logo_slide_box').forEach(box => {
 			const targetCount = 30; // Целевое количество элементов
 			const originalItems = Array.from(box.querySelectorAll('.logo_slide'));
@@ -858,116 +1317,5 @@
 			}
 		});
 	</script>
-
-	<script>
-		'use strict';
-		// ====== Константы ======
-		const CELL_WIDTH = 94; // ширина грани
-		const P_MAX = 98; // у курсора: градиент почти до низа
-		const P_MIN = 55; // далеко: короче, но заметный
-		const CENTER = 0.5; // центр экрана в долях
-		const BLEND_WIDTH = 0.2; // ширина зоны смешения парабола→волна
-		const ALPHA = 0.1; // сглаживание движения курсора (меньше → плавнее)
-		const LAMBDA = 1; // длина волны (фиксированная для стабильности)
-		const SPREAD = 1.0; // ширина параболы (|u - u0| = 1 → минимум)
-
-		// ====== Утилиты ======
-		const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-		const smoothstep = (e0, e1, x) => {
-			const t = clamp((x - e0) / (e1 - e0), 0, 1);
-			return t * t * (3 - 2 * t);
-		};
-
-		// ====== DOM ======
-		const bg = document.querySelector('.background');
-
-		function renderCells() {
-			const needed = Math.max(1, Math.ceil(window.innerWidth / CELL_WIDTH));
-			const current = bg.children.length;
-			for (let i = current; i < needed; i++) {
-				const cell = document.createElement('div');
-				cell.className = 'cell';
-				bg.appendChild(cell);
-			}
-			for (let i = bg.children.length - 1; i >= needed; i--) {
-				bg.removeChild(bg.children[i]);
-			}
-		}
-
-		// ====== Анимация градиента ======
-		let lastX = window.innerWidth / 2; // последняя позиция курсора (px)
-		let smoothU = 0.5; // сглаженная позиция курсора (0..1)
-
-		function updateGradients(x) {
-			if (typeof x === 'number') lastX = x;
-			if (!bg.children.length) renderCells();
-
-			// Геометрия контейнера (кэшируем часто используемые величины)
-			const rect = bg.getBoundingClientRect();
-			const rectLeft = rect.left;
-			const width = Math.max(1, rect.width);
-			const invWidth = 1 / width;
-
-			// Нормализуем и сглаживаем позицию курсора
-			const uMouseRaw = clamp((lastX - rectLeft) * invWidth, 0, 1);
-			smoothU += ALPHA * (uMouseRaw - smoothU);
-
-			// Плавное смешение режимов: 0 — парабола, 1 — волна
-			const blend = smoothstep(0, BLEND_WIDTH, Math.abs(smoothU - CENTER));
-
-			// Предварительные коэффициенты для быстроты
-			const m = (smoothU * 2) - 1; // центр параболы в [-1,1]
-			const range = (P_MAX - P_MIN);
-
-			// Обход без создания массивов на каждый кадр
-			const n = bg.children.length;
-			for (let i = 0; i < n; i++) {
-				const cell = bg.children[i];
-
-				// Центр ячейки в координатах контейнера (используем offset для стабильности)
-				const u = clamp((cell.offsetLeft + cell.offsetWidth * 0.5) * invWidth, 0, 1);
-
-				// 1) Параболическая компонента
-				const uu = (u * 2) - 1;
-				const d = (uu - m) / SPREAD;
-				const parabola = Math.max(0, 1 - d * d);
-				const pinkParabola = P_MIN + range * parabola;
-
-				// 2) Волновая компонента (стабильная фаза)
-				const phase = (2 * Math.PI * (u - smoothU)) / LAMBDA;
-				const wave = (Math.cos(phase) + 1) * 0.5; // 0..1
-				const pinkWave = P_MIN + range * wave;
-
-				// 3) Итог с плавным смешением
-				let pinkStop = pinkParabola * (1 - blend) + pinkWave * blend;
-				pinkStop = clamp(pinkStop, 20, 99);
-
-				//        cell.style.background = `linear-gradient(180deg, #0279C1 0%, #FF2A92 ${pinkStop}%, #FF2A92 100%)`;
-				cell.style.background = `linear-gradient(140deg, #2563EB 0%, rgba(255, 255, 255, 0.95) ${pinkStop}%, #813CE7 135%)`;
-			}
-		}
-
-		// ====== Инициализация и события ======
-		function init() {
-			renderCells();
-			const rect = bg.getBoundingClientRect();
-			const width = Math.max(1, rect.width);
-			smoothU = clamp((lastX - rect.left) / width, 0, 1);
-			requestAnimationFrame(() => updateGradients(lastX));
-		}
-
-		window.addEventListener('resize', () => {
-			renderCells();
-			requestAnimationFrame(() => updateGradients(lastX));
-		});
-
-		window.addEventListener('pointermove', (e) => {
-			updateGradients(e.clientX);
-		});
-
-		init();
-	</script>
-
-
 
 </body></html>

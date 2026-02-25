@@ -17,6 +17,15 @@
 	position: relative;
 }
 
+.tabs_catalog {
+	user-select: none;
+
+	* {
+		cursor: pointer;
+		user-select: none;
+	}
+}
+
 //
 //.tab_indicator {
 //	position: absolute;

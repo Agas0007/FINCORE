@@ -1,16 +1,83 @@
+.dohod_box,
+.banner,
+.why_us {
+	position: relative;
+}
+
+//data-cell-width="72" - Ширина одной .cell в пикселях.   
+//data-angle="180" --- Угол градиента в градусах. 180 = градиент идёт сверху вниз 140 = по диагонали 90 = слева направо
+//data-color1="#9541E6"  - Первый цвет градиента (старт, позиция 0%).
+//data-color2="#674FE3" - Средний цвет градиента (тот самый “живой” цветовой стоп, который двигается).
+//data-color3="#2259D6"  - Финальный цвет градиента (хвост).
+
+//data-color3-stop="100%" - Позиция третьего цвета в градиенте. (100% — третий цвет заканчивается в пределах блока (классический вариант) 135% 													 — цвет “растягивается” дальше, градиент выглядит мягче/длиннее 80% — переход более сжатый/контрастный)
+
+//data-pmin="45" - Минимальная позиция среднего цвета (color2) в процентах, когда ячейка далеко от активной зоны. меньше значение (35–45) → 										 цвет2 появляется раньше, переход короче/резче больше (55–65) → даже дальние ячейки остаются более “мягкими”
+
+//data-pmax="92" - Максимальная позиция среднего цвета (color2) -- выше (95–99) → у активных ячеек цвет2 уходит почти до низа, эффект сильнее 									  ниже (80–90) → эффект спокойнее
+//data-alpha="0.08"  - Коэффициент сглаживания движения курсора (smoothU)
+//data-blend-width="0.28" - парабола = чем меньше (0.1–0.2) → переключение заметнее/резче чем больше (0.25–0.4) → переход мягче и шире
+//data-spread="1.2"> - Ширина параболы меньше (0.6–0.9) → узкий пик, акцент прямо под курсором  1.0 → базовый вариант больше (1.2–1.8) → 					                   широкий “купол”, эффект размазан шире
+
+
 .background {
+	/* Индивидуально можно переопределять через data-cell-width -> JS выставит var */
+	--cell-width: 94px;
+
 	display: grid;
 	grid-auto-flow: column;
-	grid-auto-columns: 94px;
-	width: 100vw;
+	grid-auto-columns: var(--cell-width);
+
+	width: 100%;
 	min-height: 990px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
+	overflow: hidden;
+	pointer-events: none;
+	/* чтобы фон не ловил курсор */
 }
 
 .cell {
 	height: 100%;
-	transition: background 0.35s ease;
+
+	/* background-transition лучше убрать: это дорого на большом числе ячеек */
+	/* transition: background 0.35s ease; */
+
+	/* Небольшой hint браузеру */
+	will-change: background;
+}
+
+//.background {
+//	display: grid;
+//	grid-auto-flow: column;
+//	grid-auto-columns: 94px;
+//	width: 100vw;
+//	min-height: 990px;
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//	z-index: -1;
+//}
+//
+//.cell {
+//	height: 100%;
+//	transition: background 0.35s ease;
+//}
+
+.dohod_box::after,
+.why_us::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/public/images/why_us_back.svg) no-repeat center/cover;
+	z-index: -1;
+}
+
+.dohod_box::after {
+	background: url(/public/images/dohod_box.svg) no-repeat center/cover;
 }
