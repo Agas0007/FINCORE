@@ -1,6 +1,7 @@
 .dohod_box,
 .banner,
-.why_us {
+.why_us,
+.leave_request {
 	position: relative;
 }
 
@@ -66,6 +67,7 @@
 //	transition: background 0.35s ease;
 //}
 
+.leave_request::after,
 .dohod_box::after,
 .why_us::after {
 	position: absolute;
@@ -80,4 +82,8 @@
 
 .dohod_box::after {
 	background: url(/public/images/dohod_box.svg) no-repeat center/cover;
+}
+
+.leave_request::after {
+	background: url(/public/images/leave_request.svg) no-repeat center/cover;
 }

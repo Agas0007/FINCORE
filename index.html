@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="public/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="public/css/magnific-popup.min.css">
 	<link rel="stylesheet" href="public/css/main.css">
+
+	<script>
+		document.documentElement.classList.add("js");
+	</script>
 </head>
 
 <body>
@@ -43,14 +47,12 @@
 			<a href="" class="header_btn">
 				Старт
 			</a>
+		<ul class="humb">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		</div>
-		<!--
-      <ul class="humb">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul> 
--->
 	</header>
 	<main>
 		<section class="banner">
@@ -85,11 +87,11 @@
 				</div>
 				<div class="banner_right">
 					<div class="banner_icon_top">
-						<img src="/public/images/banner_icon.svg" alt="">
-					</div>
-					<img src="/public/images/top_img.jpg" alt="">
-					<div class="banner_icon_bottom">
 						<img src="/public/images/banner_icon2.svg" alt="">
+					</div>
+					<img class="banner_right_img" src="/public/images/top_img.jpg" alt="">
+					<div class="banner_icon_bottom">
+						<img src="/public/images/banner_icon.svg" alt="">
 					</div>
 				</div>
 			</div>
@@ -150,6 +152,7 @@
 					<a data-tab="tab_2" class="products_nav_tab">Кэшбэк</a>
 					<a data-tab="tab_3" class="products_nav_tab">Оптимизация затрат</a>
 					<a data-tab="tab_4" class="products_nav_tab">Разные формы легальных выплат</a>
+					<span class="tab_indicator" style="width: 181.031px; transform: translateX(5px);"></span>
 				</div>
 				<div class="products_tabs tabs_content">
 					<div id="tab_1" class="products_tab box_tab active">
@@ -673,10 +676,10 @@
 				<h2 class="why_us_title">
 					Почему FINCORE выгоднее
 				</h2>
-				<div class="why_us_tab_nav tabs_catalog products_tab_nav">
+				<div class="why_us_tab_nav tabs_catalog ">
 					<a data-tab_why_us="why_us_tab_1" data-title="Почему FINCORE выгоднее" class="why_us_tab_link products_nav_tab active">Выгода</a>
 					<a data-tab_why_us="why_us_tab_2" data-title="Зарабатывайте больше с нашими ребейтами" class="why_us_tab_link products_nav_tab">Зарабатывать больше</a>
-					<span class="tab_indicator"></span>
+					<span class="tab_indicator_why_us"></span>
 				</div>
 				<div class="products_tabs tabs_content">
 					<div id="why_us_tab_1" class="why_us_tab box_tab active">
@@ -863,9 +866,10 @@
 				<h2 class="solutions_title">
 					Решения для профессионалов рынка
 				</h2>
-				<div class="solutions_tab_nav products_tab_nav tabs_catalog">
+				<div class="solutions_tab_nav tabs_catalog">
 					<a data-tab_solutions="tab_solutions_1" class="products_nav_tab active">Простой</a>
 					<a data-tab_solutions="tab_solutions_2" class="products_nav_tab">Премиум условия</a>
+					<span class="tab_indicator_solutions"></span>
 				</div>
 
 				<div class="solutions_tabs products_tabs tabs_content">
@@ -1083,8 +1087,6 @@
 
 
 					</div>
-
-
 				</div>
 			</div>
 		</section>
@@ -1219,9 +1221,9 @@
 
 			</div>
 		</section>
-
-
 		<section class="leave_request">
+			<div class="background" data-cell-width="94" data-angle="150" data-color1="#2563eb" data-color2="rgba(97, 82, 209, 0.5)" data-color3="#9333ea" data-color3-stop="105%" data-pmin="25" data-pmax="75" data-alpha="0.08" data-blend-width="0.25" data-spread="1.2">
+			</div>
 			<div class="grid_container leave_request_wrapper">
 				<div class="leave_request_left">
 					<h2 class="leave_request_title">
@@ -1241,9 +1243,9 @@
 					</a>
 				</div>
 				<form action="" class="leave_request_form">
-					<input type="text" name="name" placeholder="Ваше имя">
-					<input type="email" name="name" placeholder="Email">
-					<input type="text" name="name" placeholder="Telegram">
+					<input type="text" name="name" placeholder="Ваше имя" class="name_input">
+					<input type="email" name="name" placeholder="Email" class="mail_input">
+					<input type="text" name="name" placeholder="Telegram" class="telegram_input">
 					<select name="" id="">
 						<option value="">Выберите вашу роль</option>
 						<option value="">Веб-мастер</option>
@@ -1251,17 +1253,104 @@
 						<option value="">IT-компания</option>
 					</select>
 
+					<button class="site_btn leave_request_btn">
+						Отправить
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.66045 6.24744L14.1604 1.5165C14.2526 1.48127 14.3568 1.50349 14.4265 1.57323C14.4963 1.64297 14.5185 1.7472 14.4833 1.83932L9.75232 14.3393C9.71379 14.4365 9.61881 14.4995 9.51425 14.4971C9.4097 14.4948 9.31767 14.4276 9.28357 14.3287L7.17732 9.13838C7.12754 8.98925 7.01051 8.87223 6.86139 8.82244L1.67107 6.71807C1.57089 6.68473 1.50245 6.59205 1.50006 6.48649C1.49768 6.38094 1.56187 6.28526 1.66045 6.24744V6.24744M14.3754 1.62432L7.0942 8.90557" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+
 					<p class="private_policy">
 						Нажимая кнопку, вы соглашаетесь с <a href="">политикой конфиденциальности</a>
 					</p>
 				</form>
 			</div>
 		</section>
-
-
-
 	</main>
 	<footer>
+		<div class="footer_top">
+			<div class="grid_container footer_wrapper">
+				<div class="footer_left">
+					<a href="" class="footer_logo">
+						<img src="/public/images/footer_logo.svg" alt="">
+					</a>
+					<span class="footer_text">
+						Современная финансовая <br>
+						экосистема для разработчиков, <br>
+						арбитражников и digital-бизнеса.
+					</span>
+					<span class="footer_official">
+						Официальный сайт
+					</span>
+				</div>
+				<div class="footer_info">
+					<div class="footer_info_item">
+						<a href="tel:+7 (000) 000-00-00" class="footer_info_link">+7 (000) 000-00-00</a>
+						<span class="footer_info_name">Телефон</span>
+					</div>
+					<div class="footer_info_item">
+						<a href="mailto:mail@mail.ru" class="footer_info_link">mail@mail.ru</a>
+						<span class="footer_info_name">Почта</span>
+					</div>
+					<div class="box_wrapper">
+						<div class="footer_info_item">
+							<span class="footer_info_link">15611565</span>
+							<span class="footer_info_name">TIN</span>
+						</div>
+						<div class="footer_info_item">
+							<span class="footer_info_link">15611565</span>
+							<span class="footer_info_name">TIN</span>
+						</div>
+					</div>
+				</div>
+				<div class="footer_social">
+					<a href="" class="footer_social_link">
+						<svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.5 0.5C7.20508 0.5 0.484375 7.4375 0.484375 16C0.484375 24.5625 7.2071 31.5 15.5 31.5C23.7929 31.5 30.5156 24.5604 30.5156 16C30.5156 7.43959 23.7949 0.5 15.5 0.5ZM22.8746 11.1188L20.4104 23.1063C20.2287 23.9563 19.7383 24.1625 19.0541 23.7625L15.3002 20.9062L13.4898 22.7063C13.29 22.9125 13.1205 23.0875 12.733 23.0875L12.9994 19.1438L19.9562 12.6562C20.259 12.3813 19.8896 12.225 19.49 12.5L10.8924 18.0875L7.18691 16.8938C6.38164 16.6313 6.36348 16.0625 7.35645 15.6625L21.8332 9.9C22.5053 9.65 23.0926 10.0688 22.8746 11.1188Z" fill="#3076FF" />
+						</svg>
+						@fincore_support
+					</a>
+					<a href="" class="footer_social_link">
+						<svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.5 0.5C7.20508 0.5 0.484375 7.4375 0.484375 16C0.484375 24.5625 7.2071 31.5 15.5 31.5C23.7929 31.5 30.5156 24.5604 30.5156 16C30.5156 7.43959 23.7949 0.5 15.5 0.5Z" fill="#3076FF" />
+							<path d="M21.2871 9H9.28398C8.73398 9 8.28711 9.45312 8.28711 10.0094V21.9906C8.28711 22.5469 8.73398 23 9.28398 23H21.2871C21.8371 23 22.2871 22.5469 22.2871 21.9906V10.0094C22.2871 9.45312 21.8371 9 21.2871 9ZM12.5184 21H10.4434V14.3187H12.5215V21H12.5184ZM11.4809 13.4062C10.8152 13.4062 10.2777 12.8676 10.2777 12.2031C10.2777 11.5387 10.8164 11 11.4809 11C12.1453 11 12.684 11.5406 12.684 12.2031C12.684 12.8688 12.1465 13.4062 11.4809 13.4062ZM20.2965 21H18.2215V17.75C18.2215 16.975 18.2059 15.9781 17.1434 15.9781C16.0621 15.9781 15.8965 16.8219 15.8965 17.6938V21H13.8215V14.3187H15.8121V15.2312H15.8402C16.1184 14.7062 16.7965 14.1531 17.8059 14.1531C19.9059 14.1531 20.2965 15.5375 20.2965 17.3375V21Z" fill="white" />
+						</svg>
+						@fincore_support
+					</a>
+				</div>
+				<div class="footer_form">
+					<span class="footer_form_title">
+						Готовы масштабироваться без ограничений?
+					</span>
+					<span class="footer_form_subtitle">
+						Оставьте заявку, и мы подберем идеальный сетап аккаунтов под ваши задачи.
+					</span>
+					<form action="" class="footer_form_box">
+						<input type="email" name="" value="" placeholder="Ваш email">
+						<button type="submit" class="footer_form_btn">Подключиться</button>
+					</form>
+					<span class="footer_form_text">
+						Отвечаем в течение 15 минут в рабочее время
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="grid_container footer_bottom_wrapper">
+				<span class="footer_link">
+					© 2025 Fincore Ltd.
+				</span>
+				<a href="" class="footer_link">
+					Политика конфиденциальности
+				</a>
+				<a href="" class="footer_link is_art">
+					Разработан
+					<img src="/public/images/is_art.svg" alt="">
+				</a>
+			</div>
+		</div>
+
 	</footer>
 
 	<script src="public/js/jquery/jquery-3.5.0.min.js"></script>
@@ -1275,9 +1364,17 @@
 	<script src="public/js/header.js"></script>
 	<script src="public/js/tabs.js"></script>
 
+	<script src="public/js/gsap.min.js"></script>
+	<script src="public/js/ScrollTrigger.min.js"></script>
+	<script src="public/js/lenis.min.js"></script>
+	<script src="public/js/animation_block.js"></script>
+	<script src="public/js/scroll.js"></script>
+
+
+
+
 	<script>
 		// подмена заголовка в табах
-
 		// Получаем все элементы с классом 'why_us_tab_link'
 		const tabLinks = document.querySelectorAll('.why_us_tab_link');
 
@@ -1304,7 +1401,7 @@
 	<script>
 		//бегущая строка
 		document.querySelectorAll('.logo_slide_box').forEach(box => {
-			const targetCount = 30; // Целевое количество элементов
+			const targetCount = 40; // Целевое количество элементов
 			const originalItems = Array.from(box.querySelectorAll('.logo_slide'));
 			if (originalItems.length === 0) return; // Пропускаем, если блок пустой
 			let currentCount = originalItems.length;

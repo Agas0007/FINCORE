@@ -18,12 +18,22 @@
 
 .marquee {
 	animation: scroll 40s linear infinite;
+
+	.logo_slide {
+		height: 48px;
+
+		img {
+			object-fit: scale-down;
+			object-position: center;
+			height: 100%;
+		}
+	}
 }
 
 
-.items-wrap:hover .marquee {
-	animation-play-state: paused;
-}
+//.items-wrap:hover .marquee {
+//	animation-play-state: paused;
+//}
 
 
 @keyframes scroll {

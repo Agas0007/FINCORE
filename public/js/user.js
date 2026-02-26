@@ -25,52 +25,51 @@ $(document).ready(function () {
 		}
 	});
 
-	//Navigation
-//	var app = function () {
-//		var body = undefined;
-//		var menu = undefined;
-//		var menuItems = undefined;
-//		var init = function init() {
-//			body = document.querySelector('body');
-//			menu = document.querySelector('.humb');
-//			menuItems = document.querySelectorAll('.nav__list-item');
-//			applyListeners();
-//		};
-//		var applyListeners = function applyListeners() {
-//			menu.addEventListener('click', function () {
-//				return toggleClass(body, 'nav-active');
-//			});
-//		};
-//		var toggleClass = function toggleClass(element, stringClass) {
-//			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);
-//			else element.classList.add(stringClass);
-//		};
-//		init();
-//	}();
-//
-//
-//	document.querySelectorAll('.sub_menu_btn').forEach(button => {
-//		button.addEventListener('click', function (event) {
-//			event.stopPropagation();
-//			const parentLi = this.closest('.menu-item-has-children');
-//			const subMenu = parentLi.querySelector('.sub-menu');
-//			if (subMenu) {
-//				subMenu.classList.toggle('active');
-//				this.classList.toggle('active_btn');
-//			}
-//		});
-//	});
-//	// Закрытие подменю при клике вне меню
-//	document.addEventListener('click', function () {
-//		document.querySelectorAll('.sub-menu.active').forEach(subMenu => {
-//			subMenu.classList.remove('active');
-//			const button = subMenu.previousElementSibling;
-//			if (button && button.classList.contains('sub_menu_btn')) {
-//				button.classList.remove('active_btn');
-//			}
-//		});
-//	});
+	Navigation
+	var app = function () {
+		var body = undefined;
+		var menu = undefined;
+		var menuItems = undefined;
+		var init = function init() {
+			body = document.querySelector('body');
+			menu = document.querySelector('.humb');
+			menuItems = document.querySelectorAll('.nav__list-item');
+			applyListeners();
+		};
+		var applyListeners = function applyListeners() {
+			menu.addEventListener('click', function () {
+				return toggleClass(body, 'nav-active');
+			});
+		};
+		var toggleClass = function toggleClass(element, stringClass) {
+			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);
+			else element.classList.add(stringClass);
+		};
+		init();
+	}();
 
+
+	document.querySelectorAll('.sub_menu_btn').forEach(button => {
+		button.addEventListener('click', function (event) {
+			event.stopPropagation();
+			const parentLi = this.closest('.menu-item-has-children');
+			const subMenu = parentLi.querySelector('.sub-menu');
+			if (subMenu) {
+				subMenu.classList.toggle('active');
+				this.classList.toggle('active_btn');
+			}
+		});
+	});
+	// Закрытие подменю при клике вне меню
+	document.addEventListener('click', function () {
+		document.querySelectorAll('.sub-menu.active').forEach(subMenu => {
+			subMenu.classList.remove('active');
+			const button = subMenu.previousElementSibling;
+			if (button && button.classList.contains('sub_menu_btn')) {
+				button.classList.remove('active_btn');
+			}
+		});
+	});
 
 	$('.modal_btn_box').magnificPopup({
 		delegate: 'a',

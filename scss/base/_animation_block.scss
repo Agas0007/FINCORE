@@ -1,0 +1,143 @@
+.js .banner .background,
+.js .banner_left > *,
+.js .banner_right .banner_right_img,
+.js .banner_right > * {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.banner_right .banner_right_img {
+	z-index: -1;
+}
+
+.banner_left > *,
+.banner_right > * {
+	will-change: transform, opacity;
+}
+
+/*для Табов*/
+
+/* Общий стиль для всех элементов */
+.triggers_item,
+.shluz,
+.developer_trig,
+.engine_mob_item {
+	position: absolute;
+	/* Убедитесь, что элементы абсолютно позиционированы */
+	//	opacity: 0.95;
+	/* Начальная прозрачность */
+}
+
+.triggers_item {
+	position: absolute;
+	animation: levitateWithRotate 3s ease-in-out infinite;
+}
+
+@keyframes levitateWithRotate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+
+	50% {
+		transform: translateY(-12px) rotate(10deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+}
+
+.shluz {
+	position: absolute;
+	animation: scaleLevitate 4s ease-in-out infinite;
+}
+
+@keyframes scaleLevitate {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 0.95;
+	}
+
+	50% {
+		transform: translateY(-8px) scale(1.1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) scale(1);
+		opacity: 0.95;
+	}
+}
+
+
+.developer_trig {
+	position: absolute;
+	animation: swingLevitate 5s ease-in-out infinite;
+}
+
+@keyframes swingLevitate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+
+	25% {
+		transform: translateY(-6px) rotate(5deg);
+		opacity: 1;
+	}
+
+	50% {
+		transform: translateY(0) rotate(10deg);
+		opacity: 1;
+	}
+
+	75% {
+		transform: translateY(-6px) rotate(5deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+}
+
+
+.engine_mob_item {
+	position: absolute;
+	animation: waveLevitate 4.5s ease-in-out infinite;
+}
+
+@keyframes waveLevitate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+
+	25% {
+		transform: translateY(-10px) rotate(-5deg);
+		opacity: 1;
+	}
+
+	50% {
+		transform: translateY(0) rotate(5deg);
+		opacity: 0.95;
+	}
+
+	75% {
+		transform: translateY(-10px) rotate(-5deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0.95;
+	}
+}
+
+
+
+/*Калькулятор*/

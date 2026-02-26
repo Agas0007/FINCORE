@@ -1,9 +1,131 @@
+@use 'mixin'as *;
+
 @media screen and (min-width:320px) and (max-width:1199px) {
 
 	.grid_container {
 		width: 100%;
 		padding: 0 5vw;
 	}
+
+	#header {
+		top: 15px;
+	}
+
+	.header_wrapper {
+		gap: 15px;
+		justify-content: flex-start;
+	}
+
+	.header_scroll .nav {
+		background: none;
+	}
+
+	.svg_text {
+		fill: var(--2563eb-osn);
+	}
+
+
+	.header_logo {
+		width: 120px;
+		height: 36px;
+	}
+
+	.header_btn {
+		height: 36px;
+		font-size: 14px;
+		margin-left: auto;
+	}
+
+	.banner {
+		min-height: inherit;
+		padding: 80px 0;
+	}
+
+	.banner::after {
+		opacity: .9;
+	}
+
+	.banner_wrapper {
+		gap: 45px;
+	}
+
+	.banner_left {
+		width: 100%;
+	}
+
+	.banner_title {
+		font-size: 24px;
+	}
+
+	.banner_subtitle {
+		font-size: 16px;
+		margin: 0 0 15px;
+	}
+
+	.site_btn {
+		height: 40px;
+		font-size: 16px;
+	}
+
+
+	.banner_btn_box {
+		gap: 16px;
+		margin-bottom: 30px;
+	}
+
+	.banner_number {
+		gap: 20px;
+
+		.banner_number_item {
+			width: calc(50% - 10px);
+		}
+	}
+
+	.banner_number_item:first-child {
+		padding-right: 0;
+		width: calc(50% - 10px);
+	}
+
+	.banner_num {
+		font-size: 28px;
+	}
+
+	.banner_number_item:first-child::after {
+		display: none;
+	}
+
+	.banner_right {
+		width: 100%;
+		height: auto;
+		margin-bottom: 45px;
+	}
+
+	.banner_icon_top,
+	.banner_icon_bottom {
+		width: 54px;
+		height: 54px;
+		padding: 12px;
+	}
+
+	.banner_icon_top {
+		right: 10px;
+	}
+
+	.banner_icon_bottom {
+		left: -20px;
+	}
+
+	.background {
+		min-height: auto;
+		height: 100%;
+	}
+
+	.marquee {
+		animation: scroll 80s linear infinite;
+	}
+
+
+
 
 }
 

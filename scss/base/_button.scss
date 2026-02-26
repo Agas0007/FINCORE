@@ -11,7 +11,38 @@
 	border-radius: 10px;
 	padding: 0 40px;
 	height: 52px;
-	transition: all 0.4s ease;
+	transition: all 0.4s ease-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+
+	svg path {
+		transition: all 0.4s ease-out;
+	}
+
+	&:hover {
+		color: #fff;
+
+		svg path {
+			stroke: #fff;
+		}
+	}
+}
+
+.site_btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #2563EB, #9333EA);
+	transition: left 0.4s ease-in-out;
+	z-index: -5;
+}
+
+.site_btn:hover::before {
+	left: 0;
 }
 
 .site_btn_blue {
@@ -28,4 +59,13 @@
 	font-size: 18px;
 	text-align: center;
 	color: var(--475569);
+
+	&:hover {
+		color: #fff;
+
+		svg path {
+			stroke: transparent;
+			fill: #fff;
+		}
+	}
 }
