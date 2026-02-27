@@ -91,7 +91,7 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url(public/images/banner_back.png) no-repeat center / cover;
+		background: url(/public/images/banner_back.png) no-repeat center / cover;
 		z-index: -1;
 	}
 
@@ -148,7 +148,7 @@ header {
 	color: var(--475569);
 	padding-left: 34px;
 	height: 24px;
-	background: url(public/images/btn_comment.svg) no-repeat left;
+	background: url(/public/images/btn_comment.svg) no-repeat left;
 	background-size: auto;
 }
 
@@ -357,7 +357,7 @@ header {
 	text-transform: uppercase;
 	color: #dc2626;
 	padding-left: 36px;
-	background: url(public/images/anti.svg) no-repeat left #fee2e2;
+	background: url(/public/images/anti.svg) no-repeat left #fee2e2;
 	background-position: 16px 50%;
 	width: fit-content;
 	margin: 0 0 40px;
@@ -406,7 +406,7 @@ header {
 		font-size: 14px;
 		color: var(--64748b);
 		padding-left: 20px;
-		background: url(public/images/list_arrov.svg) no-repeat left;
+		background: url(/public/images/list_arrov.svg) no-repeat left;
 		background-size: auto;
 
 		&:last-of-type {
@@ -983,7 +983,7 @@ header {
 .why_us {
 	border-radius: 40px 40px 0 0;
 	overflow: hidden;
-	//	background: url(public/images/why_us_back.svg) no-repeat center / cover;
+	//	background: url(/public/images/why_us_back.svg) no-repeat center / cover;
 	padding: 100px 0;
 	min-height: 768px;
 	margin-top: -40px;
@@ -1449,7 +1449,7 @@ header {
 }
 
 .select {
-	background: url(public/images/select_arrow.svg) no-repeat 95% 50%;
+	background: url(/public/images/select_arrow.svg) no-repeat 95% 50%;
 }
 
 .dohod_calc_items {
@@ -1662,7 +1662,7 @@ header {
 		transform: translate(0, -50%);
 		width: 16px;
 		height: 16px;
-		background: url(public/images/arrow.svg) no-repeat center;
+		background: url(/public/images/arrow.svg) no-repeat center;
 	}
 
 }
@@ -1740,7 +1740,7 @@ header {
 		transform: translate(0, -50%);
 		width: 16px;
 		height: 16px;
-		background: url(public/images/arrow.svg) no-repeat center;
+		background: url(/public/images/arrow.svg) no-repeat center;
 	}
 
 }
@@ -2026,7 +2026,7 @@ header {
 	font-weight: 400;
 	font-size: 16px;
 	color: #334155;
-	background: url(public/images/mail.svg) no-repeat left;
+	background: url(/public/images/mail.svg) no-repeat left;
 	background-size: auto;
 	padding-left: 32px;
 	margin: 0 0 12px;
@@ -2044,7 +2044,7 @@ header {
 	font-weight: 400;
 	font-size: 16px;
 	color: #334155;
-	background: url(public/images/telegram.svg) no-repeat left;
+	background: url(/public/images/telegram.svg) no-repeat left;
 	background-size: auto;
 	padding-left: 32px;
 	transition: all .3s ease-out;
@@ -2088,19 +2088,19 @@ input {
 
 .name_input {
 	padding-left: 46px;
-	background: url(public/images/name.svg) no-repeat 15px 50%;
+	background: url(/public/images/name.svg) no-repeat 15px 50%;
 	background-size: auto;
 }
 
 .mail_input {
 	padding-left: 46px;
-	background: url(public/images/email.svg) no-repeat 15px 50%;
+	background: url(/public/images/email.svg) no-repeat 15px 50%;
 	background-size: auto;
 }
 
 .telegram_input {
 	padding-left: 46px;
-	background: url(public/images/telegramm.svg) no-repeat 15px 50%;
+	background: url(/public/images/telegramm.svg) no-repeat 15px 50%;
 	background-size: auto;
 }
 
@@ -2137,7 +2137,7 @@ select {
 	}
 
 	/* Arrow that works in all browsers */
-	background-image: url(public/images/select_new.svg);
+	background-image: url(/public/images/select_new.svg);
 	background-repeat: no-repeat;
 	background-position: right var(--padding-x) center;
 	padding-right: calc(var(--padding-x) * 2 + var(--arrow-size));

@@ -7,11 +7,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 
-// Настраиваем  локальный сервер, локальный сервер будет брать файлы из папки public, и отображать их по адресу http://localhost:8080/
+// Настраиваем  локальный сервер, локальный сервер будет брать файлы из папки /public, и отображать их по адресу http://localhost:8080/
 
 function serveTask(done) {
   connect.server({
-    root: 'public',
+    root: '/public',
     livereload: true,
     port: 8080,
   }, function () {
@@ -29,11 +29,11 @@ function style() {
     overrideBrowserslist: ['last 2 versions']
   }))
   .pipe(gcmq())
-  .pipe(dest('public/css'))
+  .pipe(dest('/public/css'))
   .pipe(cleanCSS({
     level: 1
   }))
-  .pipe(dest('public/css/min'))
+  .pipe(dest('/public/css/min'))
   .pipe(connect.reload());
 }
 

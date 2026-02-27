@@ -144,258 +144,259 @@ document.addEventListener("DOMContentLoaded", () => {
 	tl.set(".banner_left > *, .banner_right > *, .banner_right_img", {
 		clearProps: "willChange"
 	}, "+=0.05");
-});
-
-//Калькулятор выплат
 
 
-// Убедитесь, что ScrollTrigger подключен
-gsap.registerPlugin(ScrollTrigger);
+	//Калькулятор выплат
 
 
-// Паралакс эффект для блока 
-
-gsap.from(".why_us .grid_container", {
-	opacity: 0,
-	y: 150,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".why_us .grid_container",
-		start: "top 100%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
-});
+	// Убедитесь, что ScrollTrigger подключен
+	gsap.registerPlugin(ScrollTrigger);
 
 
-// --ДОХОД --
-gsap.from(".dohod_wrap, .products .grid_container", {
-	scrollTrigger: {
-		trigger: ".dohod_wrap, .products .grid_container", // Триггер - сам элемент
-		start: "top 100%", // Когда верх элемента достигает 100% высоты окна
-		end: "top", // Конечная точка анимации, когда низ элемента достигает верха окна
-		scrub: true, // Для плавной анимации во время прокрутки
-		markers: false, // Убираем маркеры для отладки
-		toggleActions: "play none none none", // Когда триггер активирован
-	},
-	opacity: 0, // Начальная прозрачность
-	y: 50, // Смещение по оси Y
-	duration: 1, // Длительность анимации
-	ease: "power3.out", // Эффект easing для плавного движения
-});
+	// Паралакс эффект для блока 
 
-gsap.from(".dohod_right h2, .dohod_subtitle", {
-	scrollTrigger: {
-		trigger: ".dohod_right", // Триггер - сам элемент
-		start: "top 60%", // Когда верх элемента достигнет 80% высоты окна
-		//		end: "bottom top", // Когда низ элемента достигнет верха окна
-		once: true, // Анимация сработает только один раз, когда элемент попадет в видимую область
-		toggleActions: "play none none none", // Когда триггер активирован
-	},
-	opacity: 0, // Начальная прозрачность
-	y: 50, // Смещение по оси Y
-	duration: 1, // Длительность анимации
-	ease: "power3.out", // Эффект easing для плавного движения
-	stagger: 0.2 // Задержка между анимациями элементов (поочередное появление)
-});
-
-// Анимация для .dohod_list_item, элементы будут появляться поочередно
-gsap.from(".dohod_list_item", {
-	scrollTrigger: {
-		trigger: ".dohod_list", // Триггер - список элементов
-		start: "top 60%", // Когда верх списка достигнет 80% высоты окна
-		//		end: "bottom top", // Когда низ списка достигнет верха окна
-		once: true, // Анимация сработает только один раз, когда элемент попадет в видимую область
-		toggleActions: "play none none none", // Когда триггер активирован
-	},
-	opacity: 0, // Начальная прозрачность
-	y: 50, // Смещение по оси Y
-	duration: 0.5, // Длительность анимации
-	ease: "power3.out", // Эффект easing для плавного движения
-	stagger: 0.2 // Задержка между анимациями элементов (поочередное появление)
-});
+	gsap.from(".why_us .grid_container", {
+		opacity: 0,
+		y: 150,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".why_us .grid_container",
+			start: "top 100%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
 
 
+	// --ДОХОД --
+	gsap.from(".dohod_wrap, .products .grid_container", {
+		scrollTrigger: {
+			trigger: ".dohod_wrap, .products .grid_container", // Триггер - сам элемент
+			start: "top 100%", // Когда верх элемента достигает 100% высоты окна
+			end: "top", // Конечная точка анимации, когда низ элемента достигает верха окна
+			scrub: true, // Для плавной анимации во время прокрутки
+			markers: false, // Убираем маркеры для отладки
+			toggleActions: "play none none none", // Когда триггер активирован
+		},
+		opacity: 0, // Начальная прозрачность
+		y: 50, // Смещение по оси Y
+		duration: 1, // Длительность анимации
+		ease: "power3.out", // Эффект easing для плавного движения
+	});
 
-//-------------------
+	gsap.from(".dohod_right h2, .dohod_subtitle", {
+		scrollTrigger: {
+			trigger: ".dohod_right", // Триггер - сам элемент
+			start: "top 60%", // Когда верх элемента достигнет 80% высоты окна
+			//		end: "bottom top", // Когда низ элемента достигнет верха окна
+			once: true, // Анимация сработает только один раз, когда элемент попадет в видимую область
+			toggleActions: "play none none none", // Когда триггер активирован
+		},
+		opacity: 0, // Начальная прозрачность
+		y: 50, // Смещение по оси Y
+		duration: 1, // Длительность анимации
+		ease: "power3.out", // Эффект easing для плавного движения
+		stagger: 0.2 // Задержка между анимациями элементов (поочередное появление)
+	});
+
+	// Анимация для .dohod_list_item, элементы будут появляться поочередно
+	gsap.from(".dohod_list_item", {
+		scrollTrigger: {
+			trigger: ".dohod_list", // Триггер - список элементов
+			start: "top 60%", // Когда верх списка достигнет 80% высоты окна
+			//		end: "bottom top", // Когда низ списка достигнет верха окна
+			once: true, // Анимация сработает только один раз, когда элемент попадет в видимую область
+			toggleActions: "play none none none", // Когда триггер активирован
+		},
+		opacity: 0, // Начальная прозрачность
+		y: 50, // Смещение по оси Y
+		duration: 0.5, // Длительность анимации
+		ease: "power3.out", // Эффект easing для плавного движения
+		stagger: 0.2 // Задержка между анимациями элементов (поочередное появление)
+	});
 
 
 
-
-//-------------------
-
-gsap.from(".products_tabs_left", {
-	opacity: 0,
-	scale: .7,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".products_tabs_left",
-		start: "top 98%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
-});
-
-gsap.from(".products_tabs_right", {
-	opacity: 0,
-	scale: 1.2,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".tabs_catalog",
-		start: "top 85%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
-});
+	//-------------------
 
 
 
-//-------------------
 
-gsap.from(".why_us_title", {
-	opacity: 0,
-	scale: 1.2,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".why_us_title",
-		start: "top 95%",
-		end: "bottom top",
-		scrub: true,
-		once: true,
-	},
-});
+	//-------------------
 
+	gsap.from(".products_tabs_left", {
+		opacity: 0,
+		scale: .7,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".products_tabs_left",
+			start: "top 98%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
 
-///----solutions----
-
-
-gsap.from(".solutions_box", {
-	x: -200,
-	opacity: 0,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".solutions_box",
-		start: "top 95%",
-		end: "left top",
-		scrub: true,
-		once: true,
-	},
-});
-
-
-gsap.from(".solutions_title", {
-	opacity: 0,
-	scale: 1.2,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".solutions_title",
-		start: "top 95%",
-		end: "bottom top",
-		scrub: true,
-		once: true,
-	},
-});
-
-
-//-------logistika_box------------
-gsap.from(".logistika_box", {
-	opacity: 0,
-	y: 250,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".logistika_box",
-		start: "top 100%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
-});
-
-
-gsap.from(".logistika_left", {
-  opacity: 0,
-  x: -300,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".logistika_left",
-    start: "top 100%",
-    end: "top 50%",
-    scrub: true,
-    once: true,
-  },
-});
-
-gsap.from(".logistika_center", {
-  opacity: 0,
-  x: -450,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".logistika_center",
-    start: "top 100%",
-    end: "top 50%",
-    scrub: true,
-    once: true,
-  },
-});
-
-gsap.from(".logistika_right", {
-  opacity: 0,
-  x: -300,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".logistika_center",
-    start: "top 100%",
-    end: "top 50%",
-    scrub: true,
-    once: true,
-  },
-});
+	gsap.from(".products_tabs_right", {
+		opacity: 0,
+		scale: 1.2,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".tabs_catalog",
+			start: "top 85%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
 
 
 
-//-------------------
+	//-------------------
+
+	gsap.from(".why_us_title", {
+		opacity: 0,
+		scale: 1.2,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".why_us_title",
+			start: "top 95%",
+			end: "bottom top",
+			scrub: true,
+			once: true,
+		},
+	});
+
+
+	///----solutions----
+
+
+	gsap.from(".solutions_box", {
+		x: -200,
+		opacity: 0,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".solutions_box",
+			start: "top 95%",
+			end: "left top",
+			scrub: true,
+			once: true,
+		},
+	});
+
+
+	gsap.from(".solutions_title", {
+		opacity: 0,
+		scale: 1.2,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".solutions_title",
+			start: "top 95%",
+			end: "bottom top",
+			scrub: true,
+			once: true,
+		},
+	});
+
+
+	//-------logistika_box------------
+	gsap.from(".logistika_box", {
+		opacity: 0,
+		y: 250,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".logistika_box",
+			start: "top 100%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
+
+
+	gsap.from(".logistika_left", {
+		opacity: 0,
+		x: -300,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".logistika_left",
+			start: "top 100%",
+			end: "top 50%",
+			scrub: true,
+			once: true,
+		},
+	});
+
+	gsap.from(".logistika_center", {
+		opacity: 0,
+		x: -450,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".logistika_center",
+			start: "top 100%",
+			end: "top 50%",
+			scrub: true,
+			once: true,
+		},
+	});
+
+	gsap.from(".logistika_right", {
+		opacity: 0,
+		x: -300,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".logistika_center",
+			start: "top 100%",
+			end: "top 50%",
+			scrub: true,
+			once: true,
+		},
+	});
 
 
 
-//  Для формы
+	//-------------------
 
-gsap.from(".leave_request_left", {
-	opacity: 0,
-	x: -200,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".leave_request_left",
-		start: "top 90%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
-});
 
-gsap.from(".leave_request_form", {
-	opacity: 0,
-	x: 200,
-	duration: 1,
-	ease: "power3.out",
-	scrollTrigger: {
-		trigger: ".leave_request_form",
-		start: "top 90%",
-		end: "top",
-		scrub: true,
-		once: true,
-	},
+
+	//  Для формы
+
+	gsap.from(".leave_request_left", {
+		opacity: 0,
+		x: -200,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".leave_request_left",
+			start: "top 90%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
+
+	gsap.from(".leave_request_form", {
+		opacity: 0,
+		x: 200,
+		duration: 1,
+		ease: "power3.out",
+		scrollTrigger: {
+			trigger: ".leave_request_form",
+			start: "top 90%",
+			end: "top",
+			scrub: true,
+			once: true,
+		},
+	});
 });

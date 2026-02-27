@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 'use strict';
 
 // =========================
@@ -259,3 +261,4 @@ class BackgroundAnimatorManager {
 
 // Инициализация
 const bgAnimator = new BackgroundAnimatorManager('.background');
+});

@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
 	// плавная анимация за курсором
 	'use strict';
 	// ====== Константы ======
@@ -105,3 +106,4 @@
 	});
 
 	init();
+});

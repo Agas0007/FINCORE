@@ -8,8 +8,8 @@
     "app_version": "1.0.0",
     "cache": {
       "resources": [
-        "public/css/main.css",
-        "public/js/user.js",
+        "/public/css/main.css",
+        "/public/js/user.js",
       ]
     }
   }
