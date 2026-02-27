@@ -13,6 +13,15 @@ $(document).ready(function () {
 			$('.js-nav-curtain').addClass('curtain-up');
 			$('.site-nav__curtain').removeClass('curtain-down');
 		}
+	});
+
+	$('.nav__list-item').click(function () {
+		$('.js-nav-curtain').removeClass('curtain-up');
+		$('.site-nav__curtain').removeClass('curtain-down');
+		$('body').removeClass('no_scroll');
+		$('body').removeClass('nav-active');
+		$('html').removeClass('no_scroll');
+		$('.humb').removeClass('active');
 
 	});
 
@@ -90,48 +99,48 @@ $(document).ready(function () {
 	});
 
 
-	//accordion
-
-	$('#accordion').accordion({
-		header: '> .accordion_item > .accordion_header',
-		active: false,
-		collapsible: true,
-		heightStyle: "content",
-
-		// дает возможность открыть каждый сблок
-		beforeActivate: function (event, ui) {
-			if (ui.newHeader[0]) {
-				var currHeader = ui.newHeader;
-				var currContent = currHeader.next('.ui-accordion-content');
-			} else {
-				var currHeader = ui.oldHeader;
-				var currContent = currHeader.next('.ui-accordion-content');
-			}
-			var isPanelSelected = currHeader.attr('aria-selected') == 'true';
-
-			currHeader.toggleClass('ui-corner-all', isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top', !isPanelSelected).attr('aria-selected', ((!isPanelSelected).toString()));
-
-			currHeader.children('.ui-icon').toggleClass('ui-icon-plus', isPanelSelected).toggleClass('ui-icon-minus', !isPanelSelected);
-
-			currContent.toggleClass('accordion-content-active', !isPanelSelected)
-			if (isPanelSelected) {
-				currContent.slideUp();
-			} else {
-				currContent.slideDown();
-			}
-
-			return false;
-		},
-
-		icons: {
-			"header": "ui-icon-plus",
-			"activeHeader": "ui-icon-minus"
-		},
-
-	});
+	//	//accordion
+	//
+	//	$('#accordion').accordion({
+	//		header: '> .accordion_item > .accordion_header',
+	//		active: false,
+	//		collapsible: true,
+	//		heightStyle: "content",
+	//
+	//		// дает возможность открыть каждый сблок
+	//		beforeActivate: function (event, ui) {
+	//			if (ui.newHeader[0]) {
+	//				var currHeader = ui.newHeader;
+	//				var currContent = currHeader.next('.ui-accordion-content');
+	//			} else {
+	//				var currHeader = ui.oldHeader;
+	//				var currContent = currHeader.next('.ui-accordion-content');
+	//			}
+	//			var isPanelSelected = currHeader.attr('aria-selected') == 'true';
+	//
+	//			currHeader.toggleClass('ui-corner-all', isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top', !isPanelSelected).attr('aria-selected', ((!isPanelSelected).toString()));
+	//
+	//			currHeader.children('.ui-icon').toggleClass('ui-icon-plus', isPanelSelected).toggleClass('ui-icon-minus', !isPanelSelected);
+	//
+	//			currContent.toggleClass('accordion-content-active', !isPanelSelected)
+	//			if (isPanelSelected) {
+	//				currContent.slideUp();
+	//			} else {
+	//				currContent.slideDown();
+	//			}
+	//
+	//			return false;
+	//		},
+	//
+	//		icons: {
+	//			"header": "ui-icon-plus",
+	//			"activeHeader": "ui-icon-minus"
+	//		},
+	//
+	//	});
 
 	// плавный скрол 
-	const offset = 50;
+	const offset = 80;
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 

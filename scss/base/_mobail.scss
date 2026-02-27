@@ -8,7 +8,14 @@
 	}
 
 	#header {
-		top: 15px;
+		top: 0;
+		padding: 15px 0;
+		border-radius: 0 0 20px 20px;
+		transition: background .2s ease-out;
+	}
+
+	#header.scrolling-up {
+		background: #fff;
 	}
 
 	.header_wrapper {
@@ -125,21 +132,867 @@
 	}
 
 
+	/*---*/
 
+
+	/*--title--*/
+
+	.logistika_title,
+	.dohod_title,
+	.solutions_title,
+	.why_us_title,
+	.products_title {
+		font-size: 24px;
+	}
+
+
+
+	/*---*/
+
+	.products {
+		padding: 40px 0 80px;
+	}
+
+
+
+	.box_wrapper {
+		width: 100%;
+	}
+
+	.products_tab {
+		padding: 25px 15px;
+		min-height: 500px;
+	}
+
+	.products_tabs_left {
+		width: 100%;
+	}
+
+	.tabs_label {
+		margin-bottom: 25px;
+	}
+
+
+	.tabs_title {
+		font-size: 26px;
+	}
+
+	.tabs_text {
+		font-size: 14px;
+		margin: 0 0 25px;
+	}
+
+	.tabs_btn_box {
+		margin: 0 0 25px;
+	}
+
+	.tabs_btn_box a {
+		width: 100%;
+		max-width: 320px;
+		height: 50px;
+		padding: 0 15px;
+		font-size: 14px;
+	}
+
+	.products_tabs_right {
+		width: 300px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.shluz {
+		padding: 10px;
+	}
+
+	.shluz_1 {
+		top: 35px;
+		left: -20px;
+	}
+
+	.shluz_2 {
+		top: 70px;
+		right: -15px;
+	}
+
+	.shluz_3 {
+		left: 0px;
+		bottom: 18px;
+	}
+
+	.shluz_4 {
+		right: 0;
+		bottom: 30px;
+	}
+
+
+	.products_tabs_right:has(.tottal_balance) {
+		margin: 45px auto 0;
+		height: auto;
+	}
+
+
+	.tottal_balance {
+		min-width: inherit;
+		padding: 20px;
+	}
+
+	.tottal_balance_top {
+		margin-bottom: 25px;
+	}
+
+	.tottal_balance_num {
+		font-size: 24px;
+	}
+
+	.balance_triggers2 {
+		top: -35px;
+		right: -16px;
+
+	}
+
+	.tottal_balance_item {
+		padding: 8px;
+	}
+
+
+	.balance_item_right {
+		margin-left: auto;
+	}
+
+	.balance_progres_line {
+		svg {
+			width: 100%;
+		}
+	}
+
+	.balance_triggers3 {
+		bottom: -46px;
+		left: -25px;
+	}
+
+	.tabs_btn_box .more_link {
+		margin-top: 15px;
+	}
+
+	.guaranted_btn {
+		font-size: 14px;
+		padding: 6px 12px;
+		min-height: inherit;
+	}
+
+	.developer_box {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.developer_left {
+		width: calc(100% - 78px);
+		min-width: inherit;
+	}
+
+	.developer_right {
+		padding: 4px 8px;
+	}
+
+	.products_tabs_right:has(.developer_box),
+	.products_tabs_right:has(.tottal_balance) {
+		width: 100%;
+	}
+
+	.developer_title {
+		font-size: 14px;
+	}
+
+	.developer_trig {
+		width: 50px;
+		height: 50px;
+		padding: 8px;
+	}
+
+	.developer_trigger_1 {
+		top: -15px;
+		left: -13px;
+	}
+
+	.developer_trigger_2 {
+		top: 20px;
+		right: -20px;
+	}
+
+	.developer_trigger_3 {
+		bottom: 46px;
+		left: -13px;
+	}
+
+
+	#tab_4 .products_tabs_right {
+		margin: 0 auto;
+	}
+
+	.engine_mob_item {
+		padding: 10px;
+	}
+
+	.engine_mob_title {
+		font-size: 14px;
+	}
+
+	.engine_mob_1 {
+		top: -7px;
+		left: 0;
+	}
+
+	.engine_mob_2 {
+		top: 20px;
+		right: -28px;
+	}
+
+
+	.engine_mob_3 {
+		left: 0px;
+		bottom: 0;
+	}
+
+
+	.engine_mob_4 {
+		right: -16px;
+		bottom: 7px;
+	}
+
+
+	.why_us {
+		border-radius: 40px 40px 0 0;
+
+		padding: 35px 0 70px;
+		min-height: 500px;
+	}
+
+	.why_us .oborot_table,
+	.why_us .box_wrapper {
+		@include box-scroll;
+		border-radius: 40px;
+	}
+
+	.why_us .oborot_table {
+		flex-flow: column;
+	}
+
+	.oborot_item,
+	.why_us_table {
+		min-width: 700px;
+		@include item-scroll(max-width);
+	}
+
+
+	.why_us_item:first-child .why_us_left,
+	.why_us_item:first-child .why_us_center {
+		font-size: 16px;
+	}
+
+	.why_us_left,
+	.why_us_center,
+	.why_us_right {
+		padding: 15px;
+		font-size: 14px;
+	}
+
+	.why_us_left {
+		padding-left: 20px;
+	}
+
+	.oborot_info,
+	.oborot_table {
+		width: 100%;
+	}
+
+	.oborot_item {
+		min-width: 380px;
+	}
+
+	.oborot_item_name,
+	.oborot_item_value,
+	.oborot_item_name,
+	.oborot_item_value .oborot_item:first-of-type .oborot_item_value,
+	.oborot_item:first-of-type .oborot_item_name {
+		padding: 15px 15px 15px 20px;
+	}
+
+
+	.oborot_info {
+		padding: 20px;
+		height: auto;
+	}
+
+	.oborot_info_logo {
+		margin: 0 0 25px;
+	}
+
+	.oborot_info_title {
+		font-size: 24px;
+	}
+
+	.oborot_info_text {
+		font-size: 16px;
+	}
+
+	.oborot_info .pseudo_element {
+		width: 165px;
+		height: 136px;
+		right: -26px;
+		bottom: -15px;
+	}
+
+	.benefit_box {
+		padding: 20px 0;
+	}
+
+	.benefit_box .benefit_box_list {
+		justify-content: center;
+	}
+
+	.solutions_box {
+		padding: 35px 0;
+	}
+
+	.solutions_tab {
+		gap: 10px;
+	}
+
+	.solutions_item {
+		padding: 15px;
+	}
+
+	.solutions_item_icon {
+		margin: 0 0 25px;
+		width: 50px;
+		height: 50px;
+	}
+
+	.solutions_item_title {
+		font-size: 16px;
+	}
+
+	.solutions_item_text {
+		font-size: 14px;
+	}
+
+
+	.dohod_box {
+		padding: 40px 0;
+	}
+
+	.dohod_wrap {
+		flex-flow: column-reverse;
+	}
+
+	.dohod_right {
+		width: 100%;
+	}
+
+	.dohod_subtitle {
+		font-size: 16px;
+	}
+
+	.dohod_list_title {
+		font-size: 18px;
+	}
+
+	.dohod_list_text {
+		font-size: 14px;
+	}
+
+	.dohod_calc {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.dohod_calc_items {
+		gap: 0;
+	}
+
+	.dohod_calc_items .dohod_calc_item {
+		width: 100%;
+	}
+
+	.dohod_calc_value.first_child .dohod_calc_num {
+		font-size: 28px;
+	}
+
+
+	.logistika_box {
+		padding: 40px 0 40px;
+	}
+
+	.logistika_subtitle {
+		font-size: 16px;
+	}
+
+	.logistika_wrapper {
+		padding: 40px 20px 20px;
+		gap: 80px;
+	}
+
+
+
+	.leave_request,
+	.dohod_box,
+	.benefit_box,
+	.why_us {
+		width: 90vw;
+		margin: 0 auto;
+	}
+
+	.benefit_box {
+		margin-top: -30px
+	}
+
+	.why_us {
+		margin: -40px auto 0;
+	}
+
+	.leave_request_wrapper {
+		padding: 20px;
+		gap: 35px;
+	}
+
+
+	.leave_request {
+		padding: 40px 5vw;
+	}
+
+	.leave_request_form,
+	.leave_request_left {
+		width: 100%;
+	}
+
+	.leave_request_title {
+		font-size: 24px;
+	}
+
+	.leave_request_list li::before {
+		width: 35px;
+		height: 35px;
+		font-size: 14px;
+	}
+
+	.leave_request_list li {
+		padding: 0 0 0 45px;
+		font-size: 16px;
+	}
+
+	.leave_request_form {
+		padding: 15px;
+	}
+
+	select {
+		padding-right: 25px;
+		background-size: 14px;
+	}
+
+
+
+	/*1*/
+
+	/*footer*/
+
+	footer {
+		padding: 85px 0 20px;
+	}
+
+	.footer_wrapper {
+		gap: 35px;
+	}
+
+	.footer_form_btn {
+		width: 140px;
+		padding: 0 10px;
+	}
+
+	.footer_form_title {
+		font-size: 20px;
+		max-width: 300px;
+		margin: 0 auto;
+	}
 
 }
+
+
+@media screen and (min-width:320px) and (max-width:1023px) {
+
+	.logistika_center::before,
+	.logistika_left::before {
+		top: auto;
+		left: 0;
+		right: 0;
+		transform: none;
+		margin: 0 auto;
+		rotate: 90deg;
+		bottom: -50px;
+	}
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+
+	.solutions_tab_nav,
+	.why_us_tab_nav,
+	.products_tab_nav {
+		@include box-scroll;
+		gap: 5px;
+		width: auto;
+		max-width: 100%;
+		scroll-padding-left: 5px;
+	}
+
+	//	.why_us_tab_nav::after,
+	.products_tab_nav::after {
+		content: '';
+		flex: 0 0 calc(15% - 10px);
+		min-width: 20px;
+		height: 1px;
+	}
+
+	.solutions_tab_nav a,
+	.why_us_tab_nav a,
+	.products_tab_nav a {
+		@include item-scroll(max-content);
+		width: min-content;
+	}
+
+	.products_nav_tab.active {
+		background: var(--c9daff);
+	}
+
+	.tab_indicator {
+		display: none;
+	}
+
+}
+
 
 
 @media screen and (min-width:768px) and (max-width:1200px) {
 	.grid_container {
 		padding: 0 4vw;
 	}
+
+	.banner_title {
+		font-size: 26px;
+	}
+
+	.logistika_title,
+	.dohod_title,
+	.solutions_title,
+	.why_us_title,
+	.products_title {
+		font-size: 26px;
+	}
+
+	.banner {
+		min-height: inherit;
+		padding: 80px 0 120px;
+	}
+
+	.banner_right {
+		width: calc(48% - 32px);
+	}
+
+	.banner_left {
+		width: calc(52% - 13px);
+	}
+
+	.products_nav_tab {
+		padding: 0 14px;
+	}
+
+
+	.products_tab {
+		padding: 25px;
+		min-height: 450px;
+	}
+
+	.products_tabs_left {
+		width: calc(50% - 30px);
+	}
+
+	.products_tabs_right:has(.developer_box),
+	.products_tabs_right:has(.tottal_balance),
+	.products_tabs_right {
+		width: calc(50% - 30px);
+	}
+
+	.balance_triggers3 {
+		bottom: -30px;
+		left: -108px;
+	}
+
+	.developer_trigger_2 {
+		right: -28px;
+	}
+
+	.developer_trigger_3 {
+		bottom: 37px;
+		left: -35px;
+	}
+
+	.why_us_item:first-child .why_us_left,
+	.why_us_item:first-child .why_us_center {
+		font-size: 18px;
+	}
+
+	.why_us_left,
+	.why_us_center,
+	.why_us_right {
+		padding: 20px;
+		font-size: 16px;
+	}
+
+	.why_us .oborot_table,
+	.why_us .box_wrapper {
+		gap: 0;
+	}
+
+	.oborot_item_name,
+	.oborot_item_value,
+	.oborot_item_name,
+	.oborot_item_value .oborot_item:first-of-type .oborot_item_value,
+	.oborot_item:first-of-type .oborot_item_name {
+		padding: 20px;
+	}
+
+	.oborot_item,
+	.why_us_table {
+		min-width: 550px;
+	}
+
+	.oborot_info .pseudo_element {
+		width: 300px;
+		height: 300px;
+	}
+
+	.solutions_item_title {
+		font-size: 18px;
+	}
+
+	.solutions_item_text {
+		font-size: 16px;
+	}
+
+	.dohod_wrap {
+		align-items: flex-start;
+		flex-flow: row;
+		gap: 35px
+	}
+
+	.logistika_title {
+		max-width: 450px;
+	}
+
+	.logistika_subtitle {
+		max-width: 500px;
+	}
+
+	.logistika_wrapper {
+		justify-content: center;
+	}
+
+	.leave_request,
+	.dohod_box,
+	.benefit_box,
+	.why_us {
+		width: 92vw;
+
+	}
+
+	.dohod_box,
+	.leave_request {
+		padding: 30px 0;
+	}
+
+	.leave_request {
+		padding: 30px 4vw;
+	}
+
+	.leave_request_wrapper {
+		padding: 25px;
+	}
+
+	.leave_request_left {
+		width: calc(50% - 30px);
+	}
+
+	.leave_request_form {
+		width: calc(50% - 5px);
+	}
+
+
+
+	/*2*/
+
+	/*footer*/
+
+	.footer_form {
+		max-width: 400px;
+		margin-left: auto;
+	}
+
+
+
+
 }
 
-@media screen and (min-width:1024px) and (max-width:1200px) {}
+@media screen and (min-width:1024px) and (max-width:1200px) {
+	.humb {
+		display: none;
+	}
+
+	.banner {
+		padding: 124px 0;
+	}
+
+	.banner_title {
+		font-size: 34px;
+	}
+
+	.banner_subtitle {
+		font-size: 18px;
+		margin: 0 0 25px;
+	}
+
+	.site_btn {
+		height: 50px;
+		font-size: 18px;
+	}
+
+	.banner_num {
+		font-size: 36px;
+	}
+
+	.banner_number_item:first-child::after {
+		display: block;
+	}
+
+	.banner_number {
+		gap: 30px;
+	}
+
+	.banner_number_item:first-child {
+		padding-right: 30px;
+	}
+
+	.banner_number .banner_number_item {
+		width: auto;
+	}
+
+	.tabs_title {
+		font-size: 28px;
+	}
+
+	.tabs_text {
+		font-size: 16px;
+		margin: 0 0 30px;
+	}
+
+	.tabs_btn_box a {
+		font-size: 16px;
+	}
+
+	.products_tab {
+		padding: 40px;
+		min-height: 480px;
+	}
+
+	#tab_4 .products_tabs_right,
+	.products .products_tabs .products_tabs_right {
+		max-width: 416px;
+		margin: 0 auto;
+	}
+
+	.shluz_1 {
+		top: 64px;
+		left: 14px;
+	}
+
+	.shluz_2 {
+		top: 98px;
+	}
+
+	.shluz_3 {
+		left: 10px;
+		bottom: 60px;
+	}
+
+	.shluz_4 {
+		bottom: 50px;
+	}
+
+
+	.engine_mob_1 {
+		top: 22px;
+	}
+
+	.engine_mob_3 {
+		bottom: 20px;
+	}
+
+	.benefit_box .benefit_box_list {
+		justify-content: space-between;
+	}
+
+	.benefit_box li {
+		font-size: 16px;
+	}
+
+	.dohod_wrap {
+		gap: 50px;
+	}
+
+	.dohod_list_info {
+		width: calc(100% - 64px);
+	}
+
+
+	.logistika_wrapper {
+		gap: 40px;
+		justify-content: space-between;
+	}
+
+	.logistika_right,
+	.logistika_center,
+	.logistika_left {
+		max-width: 260px;
+	}
+
+
+	.logistika_center::before,
+	.logistika_left::before {
+		right: -40px;
+	}
+
+	.leave_request_title {
+		font-size: 32px;
+	}
+
+	.leave_request_list li::before {
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+	.leave_request_list li {
+		padding: 0 0 0 55px;
+		font-size: 18px;
+		max-width: 70%;
+	}
+
+	.leave_request_form {
+		padding: 24px;
+	}
+
+
+	/*3*/
+}
 
 @media screen and (min-width:1200px) {
-
 
 	.header_nav li:hover > .sub-menu {
 		transform: rotateX(0deg);
@@ -153,4 +1006,79 @@
 		display: none;
 	}
 
+}
+
+
+@media screen and (min-width:1200px) and (max-width:1640px) {
+
+
+	.grid_container {
+		padding: 0 2vw;
+	}
+
+	.background {
+		min-height: 100%;
+	}
+
+	.banner {
+		min-height: auto;
+		padding-top: 166px;
+		padding-bottom: 162px;
+	}
+
+	.banner_title {
+		font-size: 46px;
+	}
+
+	.products {
+		padding: 80px 0 90px;
+		margin-top: -95px;
+	}
+
+	.products_tab {
+		padding: 70px;
+	}
+
+	.tabs_title {
+		font-size: 48px;
+	}
+
+	.products .site_btn {
+		padding: 0 36px;
+	}
+
+	.products_tabs_right:has(.tottal_balance),
+	#tab_3 .products_tabs_right {
+		margin-left: 160px;
+	}
+
+	.products_tab {
+		min-height: 650px;
+	}
+
+	.why_us {
+		padding: 80px 0;
+		min-height: 718px;
+	}
+
+
+
+	.oborot_info .pseudo_element {
+		width: 196px;
+		height: 198px;
+	}
+
+	.logistika_box,
+	.dohod_box,
+	.solutions_box {
+		padding: 80px 0 100px;
+	}
+
+	.leave_request_wrapper {
+		padding: 60px 100px;
+	}
+
+
+
+	/**/
 }

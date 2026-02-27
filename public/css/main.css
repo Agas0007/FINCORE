@@ -1402,7 +1402,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/public/images/banner_back.png) no-repeat center/cover;
+  background: url(public/images/banner_back.png) no-repeat center/cover;
   z-index: -1;
 }
 
@@ -1481,7 +1481,7 @@ header {
   color: var(--475569);
   padding-left: 34px;
   height: 24px;
-  background: url(/public/images/btn_comment.svg) no-repeat left;
+  background: url(public/images/btn_comment.svg) no-repeat left;
   background-size: auto;
 }
 
@@ -1752,7 +1752,7 @@ header {
   text-transform: uppercase;
   color: #dc2626;
   padding-left: 36px;
-  background: url(/public/images/anti.svg) no-repeat left #fee2e2;
+  background: url(public/images/anti.svg) no-repeat left #fee2e2;
   background-position: 16px 50%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1839,7 +1839,7 @@ header {
   font-size: 14px;
   color: var(--64748b);
   padding-left: 20px;
-  background: url(/public/images/list_arrov.svg) no-repeat left;
+  background: url(public/images/list_arrov.svg) no-repeat left;
   background-size: auto;
 }
 
@@ -2957,6 +2957,16 @@ header {
   margin: 0 auto 40px;
 }
 
+.products_tab_nav,
+.products_tab_nav a,
+.tabs_catalog a,
+.tabs_catalog {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .solutions_tab {
   display: grid;
   gap: 20px;
@@ -2981,8 +2991,8 @@ header {
 }
 
 .solutions_item_icon img {
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
   -o-object-position: center;
   object-position: center;
   height: 100%;
@@ -3097,7 +3107,7 @@ header {
 }
 
 .select {
-  background: url(/public/images/select_arrow.svg) no-repeat 95% 50%;
+  background: url(public/images/select_arrow.svg) no-repeat 95% 50%;
 }
 
 .dohod_calc_items {
@@ -3348,12 +3358,12 @@ header {
   position: absolute;
   content: "";
   top: calc(50% + 18px);
-  right: -74px;
+  right: calc(-50% + 50px);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   width: 16px;
   height: 16px;
-  background: url(/public/images/arrow.svg) no-repeat center;
+  background: url(public/images/arrow.svg) no-repeat center;
 }
 
 .logistika_info_title {
@@ -3446,12 +3456,12 @@ header {
   position: absolute;
   content: "";
   top: calc(50% + 18px);
-  right: -74px;
+  right: calc(-50% + 50px);
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   width: 16px;
   height: 16px;
-  background: url(/public/images/arrow.svg) no-repeat center;
+  background: url(public/images/arrow.svg) no-repeat center;
 }
 
 .logistika_center_logo {
@@ -3554,6 +3564,10 @@ header {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   background: linear-gradient(165deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+.vuplata_item:last-of-type {
+  margin: 0;
 }
 
 .vuplata_item_top {
@@ -3792,7 +3806,7 @@ header {
   font-weight: 400;
   font-size: 16px;
   color: #334155;
-  background: url(/public/images/mail.svg) no-repeat left;
+  background: url(public/images/mail.svg) no-repeat left;
   background-size: auto;
   padding-left: 32px;
   margin: 0 0 12px;
@@ -3811,7 +3825,7 @@ header {
   font-weight: 400;
   font-size: 16px;
   color: #334155;
-  background: url(/public/images/telegram.svg) no-repeat left;
+  background: url(public/images/telegram.svg) no-repeat left;
   background-size: auto;
   padding-left: 32px;
   -webkit-transition: all 0.3s ease-out;
@@ -3873,19 +3887,19 @@ input::placeholder {
 
 .name_input {
   padding-left: 46px;
-  background: url(/public/images/name.svg) no-repeat 15px 50%;
+  background: url(public/images/name.svg) no-repeat 15px 50%;
   background-size: auto;
 }
 
 .mail_input {
   padding-left: 46px;
-  background: url(/public/images/email.svg) no-repeat 15px 50%;
+  background: url(public/images/email.svg) no-repeat 15px 50%;
   background-size: auto;
 }
 
 .telegram_input {
   padding-left: 46px;
-  background: url(/public/images/telegramm.svg) no-repeat 15px 50%;
+  background: url(public/images/telegramm.svg) no-repeat 15px 50%;
   background-size: auto;
 }
 
@@ -3947,7 +3961,7 @@ select:focus-visible {
 
 select {
   /* Arrow that works in all browsers */
-  background-image: url(/public/images/select_new.svg);
+  background-image: url(public/images/select_new.svg);
   background-repeat: no-repeat;
   background-position: right var(--padding-x) center;
   padding-right: calc(var(--padding-x) * 2 + var(--arrow-size));
@@ -4388,6 +4402,10 @@ footer {
   opacity: 1;
 }
 
+.solutions_box .box_tab.active {
+  display: grid;
+}
+
 .products_tab_nav {
   position: relative;
 }
@@ -4448,16 +4466,16 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/public/images/why_us_back.svg) no-repeat center/cover;
+  background: url(public/images/why_us_back.svg) no-repeat center/cover;
   z-index: -1;
 }
 
 .dohod_box::after {
-  background: url(/public/images/dohod_box.svg) no-repeat center/cover;
+  background: url(public/images/dohod_box.svg) no-repeat center/cover;
 }
 
 .leave_request::after {
-  background: url(/public/images/leave_request.svg) no-repeat center/cover;
+  background: url(public/images/leave_request.svg) no-repeat center/cover;
 }
 
 .items-wrap {
@@ -4912,7 +4930,7 @@ footer {
 
 @media (max-width: 480px) {
   .solutions_tab {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -4925,10 +4943,10 @@ footer {
     position: fixed;
     z-index: -98;
     width: 90vw;
-    height: 90vh;
+    height: 80vh;
     left: 0;
     right: 0;
-    top: 50px;
+    top: 80px;
     pointer-events: none;
     margin: 0 auto;
   }
@@ -4967,12 +4985,31 @@ footer {
 
   .nav__content {
     visibility: hidden;
-    width: 90%;
-    padding: 75px 0 0 40px;
-    text-align: left;
+    width: 100%;
+    padding: 75px 0;
+    text-align: center;
     overflow: auto;
     height: 100%;
     padding-bottom: 100px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .nav__content ul {
+    margin: 0 auto;
+  }
+
+  .nav__content ul li {
+    width: 100%;
+    text-align: center;
   }
 
   .nav__list {
@@ -4999,7 +5036,12 @@ footer {
   }
 
   .nav__list-item a {
-    color: red;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(#2563eb), to(#9333ea));
+    background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   /**/
@@ -5133,6 +5175,18 @@ footer {
     -webkit-transition-delay: 1.8s;
     transition-delay: 1.8s;
   }
+
+  .logistika_center::before,
+  .logistika_left::before {
+    top: auto;
+    left: 0;
+    right: 0;
+    -webkit-transform: none;
+    transform: none;
+    margin: 0 auto;
+    rotate: 90deg;
+    bottom: -50px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 1199px) {
@@ -5142,7 +5196,15 @@ footer {
   }
 
   #header {
-    top: 15px;
+    top: 0;
+    padding: 15px 0;
+    border-radius: 0 0 20px 20px;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+  }
+
+  #header.scrolling-up {
+    background: #fff;
   }
 
   .header_wrapper {
@@ -5258,10 +5320,929 @@ footer {
     -webkit-animation: scroll 80s linear infinite;
     animation: scroll 80s linear infinite;
   }
+
+  /*---*/
+
+  /*--title--*/
+
+  .logistika_title,
+  .dohod_title,
+  .solutions_title,
+  .why_us_title,
+  .products_title {
+    font-size: 24px;
+  }
+
+  /*---*/
+
+  .products {
+    padding: 40px 0 80px;
+  }
+
+  .box_wrapper {
+    width: 100%;
+  }
+
+  .products_tab {
+    padding: 25px 15px;
+    min-height: 500px;
+  }
+
+  .products_tabs_left {
+    width: 100%;
+  }
+
+  .tabs_label {
+    margin-bottom: 25px;
+  }
+
+  .tabs_title {
+    font-size: 26px;
+  }
+
+  .tabs_text {
+    font-size: 14px;
+    margin: 0 0 25px;
+  }
+
+  .tabs_btn_box {
+    margin: 0 0 25px;
+  }
+
+  .tabs_btn_box a {
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  .products_tabs_right {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .shluz {
+    padding: 10px;
+  }
+
+  .shluz_1 {
+    top: 35px;
+    left: -20px;
+  }
+
+  .shluz_2 {
+    top: 70px;
+    right: -15px;
+  }
+
+  .shluz_3 {
+    left: 0px;
+    bottom: 18px;
+  }
+
+  .shluz_4 {
+    right: 0;
+    bottom: 30px;
+  }
+
+  .products_tabs_right:has(.tottal_balance) {
+    margin: 45px auto 0;
+    height: auto;
+  }
+
+  .tottal_balance {
+    min-width: inherit;
+    padding: 20px;
+  }
+
+  .tottal_balance_top {
+    margin-bottom: 25px;
+  }
+
+  .tottal_balance_num {
+    font-size: 24px;
+  }
+
+  .balance_triggers2 {
+    top: -35px;
+    right: -16px;
+  }
+
+  .tottal_balance_item {
+    padding: 8px;
+  }
+
+  .balance_item_right {
+    margin-left: auto;
+  }
+
+  .balance_progres_line svg {
+    width: 100%;
+  }
+
+  .balance_triggers3 {
+    bottom: -46px;
+    left: -25px;
+  }
+
+  .tabs_btn_box .more_link {
+    margin-top: 15px;
+  }
+
+  .guaranted_btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    min-height: inherit;
+  }
+
+  .developer_box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .developer_left {
+    width: calc(100% - 78px);
+    min-width: inherit;
+  }
+
+  .developer_right {
+    padding: 4px 8px;
+  }
+
+  .products_tabs_right:has(.developer_box),
+  .products_tabs_right:has(.tottal_balance) {
+    width: 100%;
+  }
+
+  .developer_title {
+    font-size: 14px;
+  }
+
+  .developer_trig {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+  }
+
+  .developer_trigger_1 {
+    top: -15px;
+    left: -13px;
+  }
+
+  .developer_trigger_2 {
+    top: 20px;
+    right: -20px;
+  }
+
+  .developer_trigger_3 {
+    bottom: 46px;
+    left: -13px;
+  }
+
+  #tab_4 .products_tabs_right {
+    margin: 0 auto;
+  }
+
+  .engine_mob_item {
+    padding: 10px;
+  }
+
+  .engine_mob_title {
+    font-size: 14px;
+  }
+
+  .engine_mob_1 {
+    top: -7px;
+    left: 0;
+  }
+
+  .engine_mob_2 {
+    top: 20px;
+    right: -28px;
+  }
+
+  .engine_mob_3 {
+    left: 0px;
+    bottom: 0;
+  }
+
+  .engine_mob_4 {
+    right: -16px;
+    bottom: 7px;
+  }
+
+  .why_us {
+    border-radius: 40px 40px 0 0;
+    padding: 35px 0 70px;
+    min-height: 500px;
+  }
+
+  .why_us .oborot_table,
+  .why_us .box_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    gap: 10px;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    scroll-padding-right: 15px;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 40px;
+  }
+
+  .why_us .oborot_table {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+
+  .oborot_item,
+  .why_us_table {
+    min-width: 700px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    max-width: max-width;
+  }
+
+  .why_us_item:first-child .why_us_left,
+  .why_us_item:first-child .why_us_center {
+    font-size: 16px;
+  }
+
+  .why_us_left,
+  .why_us_center,
+  .why_us_right {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .why_us_left {
+    padding-left: 20px;
+  }
+
+  .oborot_info,
+  .oborot_table {
+    width: 100%;
+  }
+
+  .oborot_item {
+    min-width: 380px;
+  }
+
+  .oborot_item_name,
+  .oborot_item_value,
+  .oborot_item_name,
+  .oborot_item_value .oborot_item:first-of-type .oborot_item_value,
+  .oborot_item:first-of-type .oborot_item_name {
+    padding: 15px 15px 15px 20px;
+  }
+
+  .oborot_info {
+    padding: 20px;
+    height: auto;
+  }
+
+  .oborot_info_logo {
+    margin: 0 0 25px;
+  }
+
+  .oborot_info_title {
+    font-size: 24px;
+  }
+
+  .oborot_info_text {
+    font-size: 16px;
+  }
+
+  .oborot_info .pseudo_element {
+    width: 165px;
+    height: 136px;
+    right: -26px;
+    bottom: -15px;
+  }
+
+  .benefit_box {
+    padding: 20px 0;
+  }
+
+  .benefit_box .benefit_box_list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .solutions_box {
+    padding: 35px 0;
+  }
+
+  .solutions_tab {
+    gap: 10px;
+  }
+
+  .solutions_item {
+    padding: 15px;
+  }
+
+  .solutions_item_icon {
+    margin: 0 0 25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .solutions_item_title {
+    font-size: 16px;
+  }
+
+  .solutions_item_text {
+    font-size: 14px;
+  }
+
+  .dohod_box {
+    padding: 40px 0;
+  }
+
+  .dohod_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+  }
+
+  .dohod_right {
+    width: 100%;
+  }
+
+  .dohod_subtitle {
+    font-size: 16px;
+  }
+
+  .dohod_list_title {
+    font-size: 18px;
+  }
+
+  .dohod_list_text {
+    font-size: 14px;
+  }
+
+  .dohod_calc {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .dohod_calc_items {
+    gap: 0;
+  }
+
+  .dohod_calc_items .dohod_calc_item {
+    width: 100%;
+  }
+
+  .dohod_calc_value.first_child .dohod_calc_num {
+    font-size: 28px;
+  }
+
+  .logistika_box {
+    padding: 40px 0 40px;
+  }
+
+  .logistika_subtitle {
+    font-size: 16px;
+  }
+
+  .logistika_wrapper {
+    padding: 40px 20px 20px;
+    gap: 80px;
+  }
+
+  .leave_request,
+  .dohod_box,
+  .benefit_box,
+  .why_us {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .benefit_box {
+    margin-top: -30px;
+  }
+
+  .why_us {
+    margin: -40px auto 0;
+  }
+
+  .leave_request_wrapper {
+    padding: 20px;
+    gap: 35px;
+  }
+
+  .leave_request {
+    padding: 40px 5vw;
+  }
+
+  .leave_request_form,
+  .leave_request_left {
+    width: 100%;
+  }
+
+  .leave_request_title {
+    font-size: 24px;
+  }
+
+  .leave_request_list li::before {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .leave_request_list li {
+    padding: 0 0 0 45px;
+    font-size: 16px;
+  }
+
+  .leave_request_form {
+    padding: 15px;
+  }
+
+  select {
+    padding-right: 25px;
+    background-size: 14px;
+  }
+
+  /*1*/
+
+  /*footer*/
+
+  footer {
+    padding: 85px 0 20px;
+  }
+
+  .footer_wrapper {
+    gap: 35px;
+  }
+
+  .footer_form_btn {
+    width: 140px;
+    padding: 0 10px;
+  }
+
+  .footer_form_title {
+    font-size: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .solutions_tab_nav,
+  .why_us_tab_nav,
+  .products_tab_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    gap: 10px;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    scroll-padding-right: 15px;
+    -webkit-overflow-scrolling: touch;
+    gap: 5px;
+    width: auto;
+    max-width: 100%;
+    scroll-padding-left: 5px;
+  }
+
+  .products_tab_nav::after {
+    content: "";
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(15% - 10px);
+    flex: 0 0 calc(15% - 10px);
+    min-width: 20px;
+    height: 1px;
+  }
+
+  .solutions_tab_nav a,
+  .why_us_tab_nav a,
+  .products_tab_nav a {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  .products_nav_tab.active {
+    background: var(--c9daff);
+  }
+
+  .tab_indicator {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .grid_container {
     padding: 0 4vw;
   }
+
+  .banner_title {
+    font-size: 26px;
+  }
+
+  .logistika_title,
+  .dohod_title,
+  .solutions_title,
+  .why_us_title,
+  .products_title {
+    font-size: 26px;
+  }
+
+  .banner {
+    min-height: inherit;
+    padding: 80px 0 120px;
+  }
+
+  .banner_right {
+    width: calc(48% - 32px);
+  }
+
+  .banner_left {
+    width: calc(52% - 13px);
+  }
+
+  .products_nav_tab {
+    padding: 0 14px;
+  }
+
+  .products_tab {
+    padding: 25px;
+    min-height: 450px;
+  }
+
+  .products_tabs_left {
+    width: calc(50% - 30px);
+  }
+
+  .products_tabs_right:has(.developer_box),
+  .products_tabs_right:has(.tottal_balance),
+  .products_tabs_right {
+    width: calc(50% - 30px);
+  }
+
+  .balance_triggers3 {
+    bottom: -30px;
+    left: -108px;
+  }
+
+  .developer_trigger_2 {
+    right: -28px;
+  }
+
+  .developer_trigger_3 {
+    bottom: 37px;
+    left: -35px;
+  }
+
+  .why_us_item:first-child .why_us_left,
+  .why_us_item:first-child .why_us_center {
+    font-size: 18px;
+  }
+
+  .why_us_left,
+  .why_us_center,
+  .why_us_right {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .why_us .oborot_table,
+  .why_us .box_wrapper {
+    gap: 0;
+  }
+
+  .oborot_item_name,
+  .oborot_item_value,
+  .oborot_item_name,
+  .oborot_item_value .oborot_item:first-of-type .oborot_item_value,
+  .oborot_item:first-of-type .oborot_item_name {
+    padding: 20px;
+  }
+
+  .oborot_item,
+  .why_us_table {
+    min-width: 550px;
+  }
+
+  .oborot_info .pseudo_element {
+    width: 300px;
+    height: 300px;
+  }
+
+  .solutions_item_title {
+    font-size: 18px;
+  }
+
+  .solutions_item_text {
+    font-size: 16px;
+  }
+
+  .dohod_wrap {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    gap: 35px;
+  }
+
+  .logistika_title {
+    max-width: 450px;
+  }
+
+  .logistika_subtitle {
+    max-width: 500px;
+  }
+
+  .logistika_wrapper {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .leave_request,
+  .dohod_box,
+  .benefit_box,
+  .why_us {
+    width: 92vw;
+  }
+
+  .dohod_box,
+  .leave_request {
+    padding: 30px 0;
+  }
+
+  .leave_request {
+    padding: 30px 4vw;
+  }
+
+  .leave_request_wrapper {
+    padding: 25px;
+  }
+
+  .leave_request_left {
+    width: calc(50% - 30px);
+  }
+
+  .leave_request_form {
+    width: calc(50% - 5px);
+  }
+
+  /*2*/
+
+  /*footer*/
+
+  .footer_form {
+    max-width: 400px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .humb {
+    display: none;
+  }
+
+  .banner {
+    padding: 124px 0;
+  }
+
+  .banner_title {
+    font-size: 34px;
+  }
+
+  .banner_subtitle {
+    font-size: 18px;
+    margin: 0 0 25px;
+  }
+
+  .site_btn {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .banner_num {
+    font-size: 36px;
+  }
+
+  .banner_number_item:first-child::after {
+    display: block;
+  }
+
+  .banner_number {
+    gap: 30px;
+  }
+
+  .banner_number_item:first-child {
+    padding-right: 30px;
+  }
+
+  .banner_number .banner_number_item {
+    width: auto;
+  }
+
+  .tabs_title {
+    font-size: 28px;
+  }
+
+  .tabs_text {
+    font-size: 16px;
+    margin: 0 0 30px;
+  }
+
+  .tabs_btn_box a {
+    font-size: 16px;
+  }
+
+  .products_tab {
+    padding: 40px;
+    min-height: 480px;
+  }
+
+  #tab_4 .products_tabs_right,
+  .products .products_tabs .products_tabs_right {
+    max-width: 416px;
+    margin: 0 auto;
+  }
+
+  .shluz_1 {
+    top: 64px;
+    left: 14px;
+  }
+
+  .shluz_2 {
+    top: 98px;
+  }
+
+  .shluz_3 {
+    left: 10px;
+    bottom: 60px;
+  }
+
+  .shluz_4 {
+    bottom: 50px;
+  }
+
+  .engine_mob_1 {
+    top: 22px;
+  }
+
+  .engine_mob_3 {
+    bottom: 20px;
+  }
+
+  .benefit_box .benefit_box_list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .benefit_box li {
+    font-size: 16px;
+  }
+
+  .dohod_wrap {
+    gap: 50px;
+  }
+
+  .dohod_list_info {
+    width: calc(100% - 64px);
+  }
+
+  .logistika_wrapper {
+    gap: 40px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .logistika_right,
+  .logistika_center,
+  .logistika_left {
+    max-width: 260px;
+  }
+
+  .logistika_center::before,
+  .logistika_left::before {
+    right: -40px;
+  }
+
+  .leave_request_title {
+    font-size: 32px;
+  }
+
+  .leave_request_list li::before {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .leave_request_list li {
+    padding: 0 0 0 55px;
+    font-size: 18px;
+    max-width: 70%;
+  }
+
+  .leave_request_form {
+    padding: 24px;
+  }
+
+  /*3*/
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1640px) {
+  .grid_container {
+    padding: 0 2vw;
+  }
+
+  .background {
+    min-height: 100%;
+  }
+
+  .banner {
+    min-height: auto;
+    padding-top: 166px;
+    padding-bottom: 162px;
+  }
+
+  .banner_title {
+    font-size: 46px;
+  }
+
+  .products {
+    padding: 80px 0 90px;
+    margin-top: -95px;
+  }
+
+  .products_tab {
+    padding: 70px;
+  }
+
+  .tabs_title {
+    font-size: 48px;
+  }
+
+  .products .site_btn {
+    padding: 0 36px;
+  }
+
+  .products_tabs_right:has(.tottal_balance),
+  #tab_3 .products_tabs_right {
+    margin-left: 160px;
+  }
+
+  .products_tab {
+    min-height: 650px;
+  }
+
+  .why_us {
+    padding: 80px 0;
+    min-height: 718px;
+  }
+
+  .oborot_info .pseudo_element {
+    width: 196px;
+    height: 198px;
+  }
+
+  .logistika_box,
+  .dohod_box,
+  .solutions_box {
+    padding: 80px 0 100px;
+  }
+
+  .leave_request_wrapper {
+    padding: 60px 100px;
+  }
+
+  /**/
 }

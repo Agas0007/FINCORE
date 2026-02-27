@@ -30,9 +30,9 @@ function Tabs() {
     moveIndicator(e.currentTarget);
 
     // Запускаем анимацию после того, как браузер применит display:flex по .active
-    requestAnimationFrame(function () {
-      animateProductsTab(tab);
-    });
+//    requestAnimationFrame(function () {
+//      animateProductsTab(tab);
+//    });
   };
 
   var moveIndicator = function (el) {
@@ -51,7 +51,7 @@ function Tabs() {
     if (firstActiveTab) {
       moveIndicator(firstActiveTab);
     }
-    animateProductsTab(document.querySelector('.products_tab.active'));
+//    animateProductsTab(document.querySelector('.products_tab.active'));
   });
 }
 

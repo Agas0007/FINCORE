@@ -13,6 +13,10 @@
 	opacity: 1;
 }
 
+.solutions_box .box_tab.active {
+	display: grid;
+}
+
 .products_tab_nav {
 	position: relative;
 }
