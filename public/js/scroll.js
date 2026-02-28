@@ -82,16 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// === 6) ПРИМЕР АНИМАЦИИ ===
-	gsap.to(".box", {
-		y: 200,
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".box",
-			start: "top 80%",
-			end: "bottom 20%",
-			scrub: true
-		}
-	});
+//	gsap.to(".box", {
+//		y: 200,
+//		ease: "none",
+//		scrollTrigger: {
+//			trigger: ".box",
+//			start: "top 80%",
+//			end: "bottom 20%",
+//			scrub: true
+//		}
+//	});
 
 	// ВАЖНО: после всех сетапов — refresh
 	ScrollTrigger.refresh();

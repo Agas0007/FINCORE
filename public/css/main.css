@@ -830,8 +830,8 @@ input {
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
-  -webkit-font-feature-settings: "pnum" on, "lnum" on;
-  font-feature-settings: "pnum" on, "lnum" on;
+  -webkit-font-feature-settings: "pnum"on, "lnum"on;
+  font-feature-settings: "pnum"on, "lnum"on;
   color: #212121;
 }
 
@@ -952,8 +952,8 @@ input {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
-  -webkit-font-feature-settings: "pnum" on, "lnum" on;
-  font-feature-settings: "pnum" on, "lnum" on;
+  -webkit-font-feature-settings: "pnum"on, "lnum"on;
+  font-feature-settings: "pnum"on, "lnum"on;
   color: #212121;
   padding: 0 0 30px;
   border-bottom: 1px solid #E0E0E0;
@@ -2938,6 +2938,11 @@ header {
   color: var(--ffffff);
 }
 
+.box_list_img {
+  width: auto;
+  height: auto;
+}
+
 /*------*/
 
 .solutions_box {
@@ -3991,6 +3996,7 @@ option::checkmark {
 }
 
 @supports ((-webkit-appearance: base-select) or (-moz-appearance: base-select) or (appearance: base-select)) {
+
   select,
   ::picker(select) {
     -webkit-appearance: base-select;
@@ -5803,6 +5809,7 @@ footer {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+
   .solutions_tab_nav,
   .why_us_tab_nav,
   .products_tab_nav {
